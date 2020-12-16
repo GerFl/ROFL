@@ -43,8 +43,8 @@ div.sidebar {
     color: #e7e7e7;
 }
 
-div.sidebar .loho {
-    margin: 1rem 0;
+div.sidebar .logo {
+    margin: 2rem 0;
 }
 
 div.sidebar .logo:hover h2 {
@@ -108,4 +108,11 @@ div.imagenes {
     width: 90%;
     margin: 0 auto;
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+div.imagenes img.prueba {
+    grid-column: 1;
+    grid-row: 3 / 4;
 }
