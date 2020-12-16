@@ -18,6 +18,7 @@
             //console.log("Pasaste sobre el sidebar");
             document.querySelector('.proyecto #' + cursor).addEventListener('mouseover', mostrar);
             document.querySelector('.proyecto #' + cursor).addEventListener('mouseleave', ocultar);
+            // style="color:#c77210"
         }
 
         function mostrar(e) {

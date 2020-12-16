@@ -30,6 +30,7 @@ main {
 }
 
 img {
+    margin: auto auto;
     width: 50%;
 }
 
@@ -65,8 +66,29 @@ div.sidebar a:hover {
     transition: .4s ease-in-out;
 }
 
+div.sidebar a:hover i {
+    background-color: black;
+    color: white;
+    transition: .4s ease-in-out;
+}
+
+
+/* I push my fingers into my EEEEEEEEEYEESSSSSS */
+
+div.sidebar a i {
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    border-radius: 100%;
+}
+
+div.sidebar a i:hover {}
+
 div.sidebar a p {
     margin: 0;
     display: none;
     font-size: 2rem;
 }
+
+
+/* MAIN */
