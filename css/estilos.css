@@ -82,8 +82,6 @@ div.sidebar a i {
     border-radius: 100%;
 }
 
-div.sidebar a i:hover {}
-
 div.sidebar a p {
     margin: 0;
     display: none;
@@ -92,3 +90,10 @@ div.sidebar a p {
 
 
 /* MAIN */
+
+div .imagenes {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
