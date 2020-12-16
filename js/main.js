@@ -36,6 +36,7 @@
             document.querySelector(".proyecto #" + cursor + " p").style.display = "none";
             //console.log(e.target);
         }
+        /* Fany me dijo "Te quiero mucho" y fue lo primero que leí en el día y me hizo muy feliz */
     }); // DOM CONTENT LOADED
     //console.log("Cargando dentro de la función pero después del Listener");
 })();
