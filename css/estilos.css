@@ -72,12 +72,6 @@ div.sidebar .logo {
     margin: 2rem 0;
 }
 
-div.sidebar .logo:hover h2 {
-    color: black;
-    background-color: #e7e7e7;
-    transition: 1.5s ease-in-out;
-}
-
 div.sidebar h2 {
     display: block;
     font-size: 4rem;
@@ -95,9 +89,7 @@ div.sidebar .zoom a {
 }
 
 div.sidebar .zoom a:hover {
-    color: black;
     transform: scale(1.5);
-    background-color: #e7e7e7;
     transition: .4s ease-in-out;
 }
 
