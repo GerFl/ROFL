@@ -4,6 +4,7 @@
     //console.log("Cargando dentro de la función pero antes del Listener");
     document.addEventListener('DOMContentLoaded', function() {
         //console.log("Cargando dentro de la función dentro del Listener");
+        alert("Pues dije que verías cambios pero no dije que bien chidos xd");
         eventListeners();
 
         function eventListeners() {
