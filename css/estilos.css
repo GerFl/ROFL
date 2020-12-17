@@ -27,6 +27,30 @@ div.contenedor {
 
 main {
     color: white;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main.landpage {
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url(../arrebajaoenlabanera/disenografico/disenofondo.png);
+}
+
+main.fondodisenografico {
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url(../arrebajaoenlabanera/disenografico/disenofondo.png);
+}
+
+main.fondoproyectocomercial {
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url(../arrebajaoenlabanera/proyectocomercial/comercialfondo.png);
+}
+
+main.fondoproyectoresidencial {
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url(../arrebajaoenlabanera/proyectoresidencial/residencialfondo.png);
+}
+
+main.fondorenders {
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url(../arrebajaoenlabanera/renders/rendersfondo.png);
 }
 
 img {
@@ -38,9 +62,10 @@ img {
 /* SIDEBAR */
 
 div.sidebar {
-    width: 40%;
+    width: 30%;
     background-color: #171717;
     color: #e7e7e7;
+    height: 80rem;
 }
 
 div.sidebar .logo {
