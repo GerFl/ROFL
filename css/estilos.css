@@ -22,10 +22,15 @@ h1 {
 }
 
 div.contenedor {
-    display: flex;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+    .contenedor {
+        display: flex;
+    }
 }
 
 main {
@@ -62,41 +67,52 @@ img {
 /* SIDEBAR */
 
 div.sidebar {
-    width: 30%;
+    display: block;
     background-color: rgb(23, 23, 23, 0.7);
     color: #e7e7e7;
-    height: 80rem;
-}
-
-div.sidebar .logo {
-    margin: 2rem 0;
-}
-
-div.sidebar h2 {
-    display: block;
-    font-size: 4rem;
-    margin: 0;
+    font-size: 2rem;
+    text-align: center;
     padding: 1rem;
 }
 
-div.sidebar .zoom a {
-    text-align: center;
+div.sidebar h2 {
+    margin: 1rem;
+}
+
+div.proyecto {
     margin: 1rem 0;
-    font-size: 3.5rem;
-    padding: 2.5rem;
-    display: block;
-    color: white;
 }
 
-div.sidebar .zoom a:hover {
-    transform: scale(1.5);
-    transition: .4s ease-in-out;
-}
-
-div.sidebar a:hover i {
-    background-color: black;
-    color: white;
-    transition: .4s ease-in-out;
+@media (min-width: 768px) {
+    div.sidebar {
+        width: 30%;
+        height: 100%;
+    }
+    div.sidebar .logo {
+        margin: 2rem 0;
+    }
+    div.sidebar h2 {
+        display: block;
+        font-size: 4rem;
+        padding: 1rem;
+    }
+    div.sidebar .zoom a {
+        text-align: center;
+        margin: 1rem 0;
+        font-size: 3.5rem;
+        padding: 2.5rem;
+        display: block;
+        color: white;
+    }
+    div.sidebar .zoom a:hover {
+        transform: scale(1.5);
+        transition: .4s ease-in-out;
+    }
+    div.sidebar a:hover i {
+        background-color: black;
+        color: white;
+        transition: .4s ease-in-out;
+    }
 }
 
 
@@ -130,7 +146,10 @@ div.imagenes {
 }
 
 div.imagenes img {
-    padding: 1em;
+    padding: 1rem;
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
 }
 
 div.imagenes img:hover {
