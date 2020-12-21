@@ -3,7 +3,16 @@ html {
     font-size: 62.5%;
     /**Reset para REMS - 62.5% = 10px de 16px*/
     background-color: #000000;
-    font-family: 'PT Sans', sans-serif;
+}
+
+@font-face {
+    font-family: 'Ricochet';
+    src: url('../arrebajaoenlabanera/Trebuchet_MS.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'LaPulga';
+    src: url('../arrebajaoenlabanera/Today-Easter.ttf') format('truetype');
 }
 
 *,
@@ -21,6 +30,11 @@ h1 {
     color: white;
 }
 
+span,
+p {
+    font-family: 'LaPulga';
+}
+
 div.contenedor {
     background-position: center center;
     background-size: cover;
@@ -36,6 +50,7 @@ div.contenedor {
 main {
     color: white;
     width: 100%;
+    margin-bottom: 2rem;
 }
 
 div.contenedor.landpage {
@@ -68,8 +83,8 @@ img {
 
 div.sidebar {
     display: block;
-    background-color: rgb(23, 23, 23, 0.7);
-    color: #e7e7e7;
+    background-color: rgb(244, 244, 244, 0.5);
+    color: black;
     font-size: 2rem;
     text-align: center;
     padding: 1rem;
@@ -77,16 +92,22 @@ div.sidebar {
 
 div.sidebar h2 {
     margin: 1rem;
+    color: black;
+    font-family: 'Ricochet';
 }
 
 div.proyecto {
     margin: 1rem 0;
 }
 
+div.proyecto a img {
+    width: 10%;
+}
+
 @media (min-width: 768px) {
     div.sidebar {
         width: 30%;
-        height: 100%;
+        height: 100rem;
     }
     div.sidebar .logo {
         margin: 2rem 0;
@@ -108,21 +129,12 @@ div.proyecto {
         transform: scale(1.5);
         transition: .4s ease-in-out;
     }
-    div.sidebar a:hover i {
-        background-color: black;
-        color: white;
-        transition: .4s ease-in-out;
+    div.proyecto a img {
+        width: 40%;
     }
-}
-
-
-/* I push my fingers into my EEEEEEEEEYEESSSSSS */
-
-div.sidebar a i {
-    background-color: white;
-    color: black;
-    padding: 1rem;
-    border-radius: 100%;
+    div.proyecto a i {
+        font-size: 8rem;
+    }
 }
 
 div.sidebar a p {
@@ -130,6 +142,9 @@ div.sidebar a p {
     display: none;
     font-size: 2rem;
 }
+
+
+/* I push my fingers into my EEEEEEEEEYEESSSSSS */
 
 
 /* MAIN */
