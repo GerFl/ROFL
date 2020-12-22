@@ -92,7 +92,7 @@ div.sidebar {
 
 div.sidebar h2 {
     margin: 1rem;
-    color: black;
+    color: rgba(0, 0, 0, 0.7);
     font-family: 'Ricochet';
 }
 
@@ -139,7 +139,7 @@ div.proyecto a img {
         transition: .4s ease-in-out;
     }
     div.proyecto a img {
-        width: 50%;
+        width: 40%;
         opacity: .7;
     }
     div.proyecto a i {
