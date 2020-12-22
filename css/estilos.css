@@ -96,6 +96,15 @@ div.sidebar h2 {
     font-family: 'Ricochet';
 }
 
+div.volteado {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+div.volteado h2,
+span {
+    color: rgb(255, 255, 255, 0.7);
+}
+
 div.iconos {
     display: flex;
 }
@@ -142,15 +151,20 @@ div.proyecto a img {
         width: 40%;
         opacity: .7;
     }
-    div.proyecto a i {
-        font-size: 8rem;
-    }
 }
 
 div.sidebar a p {
     margin: 0;
     display: none;
     font-size: 2rem;
+}
+
+div.volteado a p {
+    color: rgb(244, 244, 244, 0.5);
+}
+
+div.volteado img {
+    -webkit-filter: invert(1);
 }
 
 
