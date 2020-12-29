@@ -12,6 +12,7 @@
         // alert(window.innerWidth);
         eventListeners();
 
+
         function eventListeners() {
             // Listeners para mostrar el name
             document.querySelector('.sidebar').addEventListener('mouseover', paso);

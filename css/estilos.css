@@ -142,6 +142,7 @@ div.proyecto a img {
     div.sidebar {
         width: 30%;
         height: 120rem;
+        display: block;
     }
     div.sidebar .logo {
         margin: 2rem 0;
@@ -263,4 +264,17 @@ div.imagenes img.grid-column24 {
 
 div.imagenes img.grid-column35 {
     grid-column: 3 / 5;
+}
+
+
+/* RECORRIDOS VIRTUALES */
+
+div.video {
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+div.video iframe {
+    width: 90%;
 }
