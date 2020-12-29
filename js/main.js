@@ -15,6 +15,8 @@
         function eventListeners() {
             // Listeners para mostrar el name
             document.querySelector('.sidebar').addEventListener('mouseover', paso);
+            document.querySelector('.logo a.barras').addEventListener('click', menumovilabrir);
+            document.querySelector('.logo a.close').addEventListener('click', menumovilcerrar);
         }
 
         function paso(e) {
@@ -41,6 +43,22 @@
             //console.log(cursor);
             document.querySelector(".proyecto #" + cursor + " p").style.display = "none";
             //console.log(e.target);
+        }
+
+        function menumovilabrir(e) {
+            e.preventDefault();
+            // alert("Diste clic pa abrir");
+            document.querySelector(".iconos").style.display = "flex";
+            document.querySelector('.logo a.close').style.display = "block";
+            document.querySelector('.logo a.barras').style.display = "none";
+        }
+
+        function menumovilcerrar(e) {
+            e.preventDefault();
+            // alert("Diste clic pa cerrar");
+            document.querySelector(".iconos").style.display = "none";
+            document.querySelector('.logo a.close').style.display = "none";
+            document.querySelector('.logo a.barras').style.display = "block";
         }
         /* Fany me dijo "Te quiero mucho" y fue lo primero que leí en el día y me hizo muy feliz */
     }); // DOM CONTENT LOADED

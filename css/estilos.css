@@ -62,7 +62,7 @@ div.contenedor.fondoproyectocomercial {
 }
 
 div.contenedor.fondoproyectoresidencial {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../arrebajaoenlabanera/proyectoresidencial/residencialfondo.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../arrebajaoenlabanera/proyectoresidencial/residencialfondo.jpeg);
 }
 
 div.contenedor.fondorenders {
@@ -105,9 +105,30 @@ span {
     color: rgb(255, 255, 255, 0.7);
 }
 
-div.iconos {
-    display: flex;
+
+/* Menú de hamburgruesa */
+
+div.logo a {
+    display: block;
 }
+
+div.iconos {
+    display: none;
+}
+
+div.logo a.menu-movil i {
+    color: white;
+    font-size: 1.8rem;
+}
+
+div.logo a.close {
+    display: none;
+}
+
+
+/* div.iconos:target {
+    display: flex;
+} */
 
 div.proyecto {
     margin: 1rem 0;
@@ -150,6 +171,9 @@ div.proyecto a img {
     div.proyecto a img {
         width: 40%;
         opacity: .7;
+    }
+    div.logo a.menu-movil i {
+        display: none;
     }
 }
 
