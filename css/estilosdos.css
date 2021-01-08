@@ -103,15 +103,15 @@ section {
     padding: 0 2rem 2rem 2rem;
 }
 
-section.seccion3 {
-    margin-bottom: 0;
-}
-
 div.marco section {
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
+}
+
+div.marco section .bots {
+    justify-content: space-between;
 }
 
 div.marco section.seccion1 {
@@ -126,6 +126,14 @@ div.marco section.seccion2 {
 
 div.marco section.seccion3 {
     display: flex;
+}
+
+div.marco section.seccion3 .bots {
+    align-self: center;
+}
+
+section.seccion3 {
+    margin-bottom: 0;
 }
 
 
@@ -203,7 +211,8 @@ div.grid-proyectos {
 div.proyectos {
     position: relative;
     background-color: black;
-    width: 50%;
+    border: 1px solid green;
+    width: 70%;
     height: 90%;
     margin: 0 auto;
     align-self: center;
@@ -212,27 +221,29 @@ div.proyectos {
 div.skeleton {
     border: 1px solid white;
     position: absolute;
-    top: 2rem;
     left: 50%;
+    bottom: -2rem;
     transform: translateX(-50%);
-    padding: 10rem;
+    width: 80%;
+    height: 70%;
 }
 
 div.skeleton a {
     position: absolute;
-    border: 1px solid blue;
-    top: 2rem;
+    /*border: 1px solid blue;*/
+    top: -30%;
     left: 50%;
     transform: translateX(-50%);
-    padding: 10rem;
+    padding: 60%;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../arrebajaoenlabanera/disenografico/diseno2.png);
+    background-image: url(../arrebajaoenlabanera/diseno1.webp);
 }
 
 div.skeleton a:hover {
     background-color: blue;
+    background-image: linear-gradient(rgb(193, 69, 75), rgba(193, 69, 75)), url(../arrebajaoenlabanera/diseno1.webp);
 }
 
 
