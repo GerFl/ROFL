@@ -208,15 +208,20 @@ div.grid-proyectos {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+
+/* CAPA 1 */
+
 div.proyectos {
     position: relative;
     background-color: black;
-    border: 1px solid green;
     width: 70%;
     height: 90%;
     margin: 0 auto;
     align-self: center;
 }
+
+
+/* CAPA 2 */
 
 div.skeleton {
     border: 1px solid white;
@@ -228,22 +233,55 @@ div.skeleton {
     height: 70%;
 }
 
-div.skeleton a {
+
+/* CAPA 3 */
+
+.foreground {
     position: absolute;
-    /*border: 1px solid blue;*/
-    top: -30%;
+    top: -40%;
     left: 50%;
     transform: translateX(-50%);
-    padding: 60%;
+    padding: 70%;
     background-position: center center;
-    background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(../arrebajaoenlabanera/diseno1.webp);
+    background-size: cover;
 }
 
-div.skeleton a:hover {
-    background-color: blue;
-    background-image: linear-gradient(rgb(193, 69, 75), rgba(193, 69, 75)), url(../arrebajaoenlabanera/diseno1.webp);
+
+/* CAPA 4 */
+
+.foreground a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+}
+
+.foreground a:hover {
+    background-color: rgb(193, 69, 75);
+    transition: .3s ease-in-out;
+}
+
+#proyectocomercial .foreground {
+    background-image: url(../arrebajaoenlabanera/proyectocomercial/comercialfondo.png);
+}
+
+#proyectoresidencial .foreground {
+    background-image: url(../arrebajaoenlabanera/proyectoresidencial/residencialfondo.jpeg);
+}
+
+#recorridosvirtuales .foreground {
+    background-image: url(../arrebajaoenlabanera/recorridosfondo.jpg);
+}
+
+#renders .foreground {
+    background-image: url(../arrebajaoenlabanera/renders/rendersfondo.png);
+}
+
+#disenografico .foreground {
+    background-image: url(../arrebajaoenlabanera/disenografico/disenofondo.png);
 }
 
 
