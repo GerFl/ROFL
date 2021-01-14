@@ -4,15 +4,26 @@ Estático pero ps ahí va creciendo la mota
 
 Update: 2do diseño
 
--Convertir imágenes a webp
+EN PROCESO:
+-Mejorar index
+-Agregar marco y tags
+-Hacer el nuevo layout
+-Animar flechas y glitches de título
+
+COMPLETADO:
+-Hacer una carpeta para guardar ahí los archivos del primer diseño
+-Renombrar todos los archivos y rutas
+-Convertir imágenes a webp (manualmente, me lleva la v)
+
+PENDIENTE:
 -Scroll-snap enhancement
 -Optimizar rendimiento (lazy loading, prefetch)
--Mejorar index
--Animar flechas y glitches de título
 -Agregar íconos en workbook
 -Mejorar distribución de secciones
--Hacer el nuevo layout
 -Hacer galería
--Agregar marco y tags
+
+
+12/01/2021 - Hoy fue un buen día porque compré unos audífonos
+13/01/2021 - Hoy fue un mejor día porque ya me llegaron mis audífonos
 
 https://floresr.netlify.app
