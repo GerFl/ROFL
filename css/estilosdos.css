@@ -13,15 +13,6 @@
             scroll-snap-stop:always;
         }
 
-        grid
-        .contenido{
-        grid-template-areas:"izquierda centro derecha";
-        grid-template-columns:1fr 2fr 2fr;
-        }
-        .cont{
-        grid-area:izquierda;
-        }
-
         LA PERFORMANCE
         Lazy loading
         <img loading="lazy">
@@ -50,8 +41,8 @@ html {
     font-size: 62.5%;
     /**Reset para REMS - 62.5% = 10px de 16px*/
     background-color: #000000;
-    /* overflow: hidden;*/
-    /*scroll-snap-type: y mandatory;*/
+    /*overflow: hidden;
+    scroll-snap-type: y mandatory;*/
 }
 
 @font-face {
@@ -77,8 +68,8 @@ a {
 }
 
 img {
-    margin: 0;
-    width: 50%;
+    margin: 0 auto;
+    width: 100%;
 }
 
 h2 {
@@ -119,15 +110,34 @@ section {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-    padding: 1rem;
 }
 
 div.marco {
     display: flex;
     border-bottom: 1px solid white;
     border-right: 1px solid white;
-    padding: 1rem;
-    height: 100%;
+    height: 95%;
+}
+
+div.tags {
+    position: absolute;
+    width: 4%;
+    bottom: 0;
+    right: 10rem;
+    display: flex;
+}
+
+div.tags .lang {
+    position: relative;
+}
+
+div.tags .lang p {
+    position: absolute;
+    top: -1rem;
+    left: 17%;
+    font-size: 1.5rem;
+    color: black;
+    font-family: 'Ricochet';
 }
 
 section .bots {
@@ -169,13 +179,12 @@ section.seccion3 {
 
 div.sidebar {
     display: flex;
-    height: 95vh;
     width: 50%;
 }
 
 div.sidebar img {
-    width: 70%;
     margin: 3rem 0;
+    width: 100%;
 }
 
 div.sidebar .bots {
@@ -186,30 +195,46 @@ div.sidebar .bots {
     margin-right: 1rem;
 }
 
-div.nombre img {
-    display: block;
-    width: 80%;
+div.nombre {
+    margin-top: 3rem;
 }
 
-div.barras {
-    border: 1px solid red;
+div.nombre img {
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+
+div.nombre img:nth-child(2) {
+    margin-left: 2rem;
+}
+
+div.barras .box1 {
+    border: 1px solid blue;
+    border-left: 0;
+    border-right: 0;
+    height: 100%;
+}
+
+div.barras .box2 {
+    height: 100%;
+    border-bottom: 1px solid blue;
 }
 
 div.arrows {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 30%;
+    height: 20%;
     border: 1px solid green;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 
 /* Animación de las flechas */
 
 div.arrows i {
-    font-size: 3.5rem;
-    animation: zoomflecha 1.5s infinite;
+    font-size: 3rem;
+    animation: zoomflecha 1s infinite;
 }
 
 @keyframes zoomflecha {
@@ -220,11 +245,14 @@ div.arrows i {
 
 div.lettering {
     display: flex;
-    width: 50%;
+    width: 80%;
+    border: 1px dotted orange;
+    align-self: center;
+    margin-left: 4rem;
 }
 
 div.lettering .letras {
-    width: 100%;
+    width: 50%;
 }
 
 div.lettering .letritas {
@@ -236,8 +264,29 @@ div.lettering .letras img {
 }
 
 div.lettering .letritas img {
-    width: 70%;
+    width: 40%;
     border-left: 1px solid white;
+}
+
+div.vacio {
+    height: 30%;
+}
+
+section.seccion2 .lettering .letras img {
+    width: 90%;
+}
+
+section.seccion2 .lettering .letritas img {
+    width: 15%;
+}
+
+section.seccion3 .lettering .letras img {
+    width: 100%;
+}
+
+section.seccion3 .lettering .letritas img {
+    margin-left: 1rem;
+    width: 15%;
 }
 
 
@@ -252,7 +301,9 @@ div.grid-proyectos {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    /*grid-template-rows: 1fr 0.2fr 1fr;*/
     border: 1px solid green;
+    row-gap: 5em;
 }
 
 
@@ -280,6 +331,13 @@ div.skeleton {
     height: 70%;
 }
 
+div.skeleton img {
+    position: absolute;
+    bottom: -4rem;
+    width: 35%;
+    right: 5rem;
+}
+
 
 /* CAPA 3 */
 
@@ -292,23 +350,6 @@ div.skeleton {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-
-/* CAPA 4 */
-
-.foreground a {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    text-align: center;
-}
-
-.foreground a:hover {
-    background-color: rgb(193, 69, 75);
-    transition: .3s ease-in-out;
 }
 
 #proyectocomercial .foreground {
@@ -329,6 +370,39 @@ div.skeleton {
 
 #disenografico .foreground {
     background-image: url(../arrebajaoenlabanera/disenografico/disenofondo.webp);
+}
+
+
+/* CAPA 4 */
+
+.text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    font-family: 'Ricochet';
+}
+
+.text a {
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    left: 0;
+    text-align: center;
+    font-weight: 300;
+    font-size: 2rem;
+    width: 100%;
+    height: 100%;
+}
+
+.text a p {
+    font-size: 1.7rem;
+}
+
+.text:hover {
+    background-color: rgb(208, 82, 54);
+    transition: .3s ease-in-out;
 }
 
 
@@ -451,6 +525,14 @@ div.volteado img {
 
 /* MAIN */
 
+div.layout {
+    padding: 1rem 2rem;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
 
 /* I won't let this build up inside of me */
 
@@ -458,12 +540,13 @@ div.imagenes {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    border: 1px dotted purple;
 }
 
 div.imagenes img {
     padding: 1rem;
-    height: 30rem;
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
