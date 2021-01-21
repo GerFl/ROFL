@@ -5,15 +5,16 @@ Estático pero ps ahí va creciendo la mota
 Update: 2do diseño
 
 EN PROCESO:
--Mejorar index
--Agregar marco y tags
--Hacer el nuevo layout
--Animar flechas y glitches de título
+ -Glitches de título
 
 COMPLETADO:
 -Hacer una carpeta para guardar ahí los archivos del primer diseño
 -Renombrar todos los archivos y rutas
 -Convertir imágenes a webp (manualmente, me lleva la v)
+-Mejorar index
+-Agregar marco y tags
+-Hacer el nuevo layout
+-Animar flechas
 
 PENDIENTE:
 -Scroll-snap enhancement
