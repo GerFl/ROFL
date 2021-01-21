@@ -41,8 +41,8 @@ html {
     font-size: 62.5%;
     /**Reset para REMS - 62.5% = 10px de 16px*/
     background-color: #000000;
-    /*overflow: hidden;
-    scroll-snap-type: y mandatory;*/
+    /*scroll-snap-type: y mandatory;*/
+    user-select: none;
 }
 
 @font-face {
@@ -55,10 +55,30 @@ html {
     src: url('../arrebajaoenlabanera/Today-Easter.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Zrnic';
+    src: url('../arrebajaoenlabanera/zrnicrg.ttf');
+}
+
+@font-face {
+    font-family: 'Swis';
+    src: url('../arrebajaoenlabanera/swz721lc.ttf');
+}
+
 *,
 *:before,
 *:after {
     box-sizing: inherit;
+}
+
+
+/* SNAP */
+
+.seccion1,
+.seccion2,
+.seccion3 {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 
 a {
@@ -73,22 +93,27 @@ img {
 }
 
 h2 {
+    font-family: 'Zrnic';
+}
+
+h2,
+h3 {
     color: white;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin: 0;
+    text-align: left;
 }
 
-h2.construction {
-    font-size: 4rem;
-    font-family: 'Ricochet';
-}
-
-h2.construction i {
-    font-size: 5rem;
-    margin: 1rem;
+h3 {
+    font-family: 'Swis';
 }
 
 p {
     color: white;
     font-size: 2rem;
+    font-family: 'Ricochet';
 }
 
 
@@ -121,7 +146,7 @@ div.marco {
 
 div.tags {
     position: absolute;
-    width: 4%;
+    width: 5.7rem;
     bottom: 0;
     right: 10rem;
     display: flex;
@@ -134,15 +159,16 @@ div.tags .lang {
 div.tags .lang p {
     position: absolute;
     top: -1rem;
-    left: 17%;
+    margin-left: 13%;
     font-size: 1.5rem;
     color: black;
-    font-family: 'Ricochet';
+    font-family: 'Zrnic';
 }
 
-section .bots {
-    justify-content: space-between;
-}
+
+/*section .bots {
+    justify-content: center
+}*/
 
 section.seccion1 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../arrebajaoenlabanera/proyectocomercial/comercial6.webp);
@@ -152,12 +178,14 @@ section.seccion2 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../arrebajaoenlabanera/proyectoresidencial/residencial9.webp);
 }
 
-section.seccion3 {
+
+/*section.seccion3 {
     display: flex;
-}
+}*/
 
 section.seccion3 .bots {
     align-self: center;
+    transform: rotateX(180deg);
 }
 
 section.seccion3 {
@@ -165,47 +193,49 @@ section.seccion3 {
 }
 
 
-/* SNAP */
-
-.seccion1,
-.seccion2,
-.seccion3 {
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-}
-
-
 /* SIDEBAR */
 
 div.sidebar {
     display: flex;
-    width: 50%;
+    width: 40%;
+    border: 5px dotted cyan;
 }
 
-div.sidebar img {
+
+/*div.sidebar img {
     margin: 3rem 0;
     width: 100%;
-}
+}*/
 
 div.sidebar .bots {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 20%;
-    margin-right: 1rem;
+    width: 30%;
+    border: 1px solid cadetblue;
 }
 
 div.nombre {
-    margin-top: 3rem;
+    border: 1px dotted red;
+    height: 33.3%;
 }
 
-div.nombre img {
-    display: block;
-    width: 100%;
+div.nombre h2 {
+    border: 1px solid pink;
+    font-family: 'Swis';
+    font-weight: 300;
+    font-size: 2.5rem;
     margin: 0;
 }
 
-div.nombre img:nth-child(2) {
+
+/*div.nombre img {
+    display: block;
+    width: 100%;
+    margin: 0;
+}*/
+
+div.nombre h2:nth-child(2) {
     margin-left: 2rem;
 }
 
@@ -217,16 +247,29 @@ div.barras .box1 {
 }
 
 div.barras .box2 {
-    height: 100%;
+    height: 1rem;
     border-bottom: 1px solid blue;
 }
 
-div.arrows {
+div.barras {
+    height: 33.3%;
+    border: 1px solid yellow;
     display: flex;
     flex-direction: column;
-    height: 20%;
+    padding: 50% 0;
+}
+
+div.barras p {
+    margin: 0;
+    height: 1rem;
+}
+
+div.arrows {
+    height: 33.3%;
+    display: flex;
+    flex-direction: column;
     border: 1px solid green;
-    justify-content: flex-start;
+    justify-content: flex-end;
 }
 
 
@@ -238,14 +281,14 @@ div.arrows i {
 }
 
 @keyframes zoomflecha {
-    50% {
+    30% {
         padding-bottom: 0.3rem;
     }
 }
 
 div.lettering {
     display: flex;
-    width: 80%;
+    width: 70%;
     border: 1px dotted orange;
     align-self: center;
     margin-left: 4rem;
@@ -256,39 +299,24 @@ div.lettering .letras {
 }
 
 div.lettering .letritas {
-    width: 100%;
+    width: 50%;
 }
 
-div.lettering .letras img {
-    width: 70%;
+section div.lettering .letras h2 {
+    margin: 0;
+    font-size: 6rem;
+    font-weight: 300;
 }
 
-div.lettering .letritas img {
-    width: 40%;
+section div.lettering .letritas h3 {
+    margin: 0;
+    font-size: 3rem;
     border-left: 1px solid white;
 }
 
 div.vacio {
     height: 30%;
-}
-
-section.seccion2 .lettering .letras img {
-    width: 90%;
-}
-
-section.seccion2 .lettering .letritas img {
-    width: 15%;
-}
-
-section.seccion3 .lettering .letras img {
-    width: 100%;
-    border-right: 1px solid white;
-}
-
-section.seccion3 .lettering .letritas img {
-    margin-left: 1rem;
-    width: 10%;
-    border: none;
+    border: 1px solid pink;
 }
 
 
@@ -297,6 +325,15 @@ section.seccion3 .lettering .letritas img {
 div.contenido {
     width: 100%;
     display: flex;
+    border: 1px dotted yellowgreen;
+}
+
+div.contenido img {
+    height: 90%;
+    width: 90%;
+    margin: 0 auto;
+    align-self: center;
+    border: 5px dotted gold;
 }
 
 div.grid-proyectos {
@@ -316,8 +353,8 @@ div.grid-proyectos {
 div.proyectos {
     position: relative;
     background-color: black;
-    width: 60%;
-    height: 80%;
+    width: 15rem;
+    height: 20rem;
     margin: 0 auto;
     align-self: center;
 }
@@ -542,10 +579,12 @@ div.pagina-proyecto .sidebar {
 div.pagina-proyecto .arriba img {
     width: 10rem;
     margin: 0;
+    border: 1px dotted blue;
 }
 
 div.pagina-proyecto .medio {
     display: flex;
+    border: 1px dotted pink;
 }
 
 div.pagina-proyecto .medio .iconos {
@@ -560,7 +599,7 @@ div.pagina-proyecto .medio .iconos {
 div.medio .iconos a {
     border: 1px dotted gold;
     width: 6rem;
-    margin-bottom: 1rem;
+    margin-bottom: 10%;
 }
 
 div.medio .iconos a:hover {
@@ -568,16 +607,14 @@ div.medio .iconos a:hover {
     transition: .3s ease-in-out;
 }
 
-div.medio .iconos img {
-    margin: 0.5rem;
-    width: 5rem;
+div.medio .actual {
+    margin-top: 1rem;
 }
 
-div.medio .actual img {
+div.medio .actual h2 {
     border-left: 1px solid white;
-    width: 8rem;
-    height: 16rem;
-    margin: 0;
+    font-size: 4rem;
+    padding-left: 1rem;
 }
 
 div.pagina-proyecto .abajo {
@@ -588,16 +625,19 @@ div.pagina-proyecto .abajo {
 
 div.abajo .arrows {
     flex-direction: row;
+    border: 1px dashed green;
+    height: 100%;
+    width: 7rem;
+    align-items: flex-start;
 }
 
-div.arrows i {
+div.abajo .arrows i {
     font-size: 3rem;
     animation: flechaizquierda 1s infinite;
 }
 
 @keyframes flechaizquierda {
-    50% {
-        padding-bottom: 0.3rem;
+    60% {
         margin-left: 0.3rem;
     }
 }
@@ -607,9 +647,6 @@ div.arrows i {
 
 div.layout {
     padding: 1rem 2rem;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
     height: 100vh;
 }
 
@@ -620,7 +657,11 @@ div.imagenes {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    border: 1px dotted purple;
+    border: 7px dashed purple;
+}
+
+div.imagenes.unshingo {
+    grid-template-rows: repeat(5, 1fr);
 }
 
 div.imagenes img {
@@ -633,12 +674,6 @@ div.imagenes img {
 div.imagenes img:hover {
     transform: scale(1.045);
     transition: .3s ease-in-out;
-}
-
-img.justgrow {
-    width: 100%;
-    align-items: center;
-    align-content: center;
 }
 
 div.imagenes img.grid-column13 {
@@ -708,7 +743,8 @@ div.video iframe {
 
 /* RANDOM TESTS */
 
-.circles {
+
+/*.circles {
     display: flex;
     width: 200px;
     justify-content: space-between;
@@ -761,6 +797,7 @@ div.video iframe {
 .circle:nth-child(5):before {
     animation-delay: 1.2s;
 }
+*/
 
 
 /*
