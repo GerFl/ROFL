@@ -660,6 +660,10 @@ div.imagenes {
     border: 7px dashed purple;
 }
 
+div.imagenes.videos {
+    grid-template-columns: repeat(3, 1fr);
+}
+
 div.imagenes.unshingo {
     grid-template-rows: repeat(5, 1fr);
 }

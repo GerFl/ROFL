@@ -6,6 +6,7 @@ Update: 2do diseño
 
 EN PROCESO:
  -Glitches de título
+ -Hacer galería
 
 COMPLETADO:
 -Hacer una carpeta para guardar ahí los archivos del primer diseño
@@ -15,13 +16,14 @@ COMPLETADO:
 -Agregar marco y tags
 -Hacer el nuevo layout
 -Animar flechas
+-Agregar íconos en workbook
+-Mejorar distribución de secciones
 
 PENDIENTE:
 -Scroll-snap enhancement
 -Optimizar rendimiento (lazy loading, prefetch)
--Agregar íconos en workbook
--Mejorar distribución de secciones
--Hacer galería
+
+
 
 
 12/01/2021 - Hoy fue un buen día porque compré unos audífonos
