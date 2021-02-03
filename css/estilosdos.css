@@ -628,7 +628,7 @@ div.abajo .arrows {
     border: 1px dashed green;
     height: 100%;
     width: 7rem;
-    align-items: flex-start;
+    align-items: flex-end;
 }
 
 div.abajo .arrows i {
@@ -657,7 +657,7 @@ div.imagenes {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    border: 7px dashed purple;
+    border: 2px dashed purple;
 }
 
 div.imagenes.videos {
@@ -727,7 +727,11 @@ div.imagenes img.grid-row23 {
 div.imagenes img.grid-row34 {
     grid-row: 3 / 4;
 }
-
+img.justgrow {
+    width: 100%;
+    align-items: center;
+    align-content: center;
+}
 
 /* RECORRIDOS VIRTUALES */
 

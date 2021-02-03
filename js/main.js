@@ -15,7 +15,7 @@
 
         function eventListeners() {
             // Listeners para mostrar el name
-            document.querySelector('.sidebar').addEventListener('mouseover', paso);
+            // document.querySelector('.sidebar').addEventListener('mouseover', paso);
             // Menú móvil
             document.querySelector('.logo a.barras').addEventListener('click', menumovilabrir);
             document.querySelector('.logo a.close').addEventListener('click', menumovilcerrar);

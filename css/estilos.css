@@ -140,7 +140,7 @@ div.proyecto a img {
 
 div.sidebar a p {
     margin: 0;
-    display: none;
+    display:none;
     font-size: 2rem;
 }
 
@@ -182,6 +182,9 @@ div.volteado img {
     div.sidebar .zoom a:hover {
         transform: scale(1.5);
         transition: .4s ease-in-out;
+    }
+    div.sidebar .zoom a:hover p{
+        display: block;
     }
     div.proyecto a img {
         width: 40%;
