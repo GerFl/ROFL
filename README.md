@@ -4,10 +4,8 @@ Portafolio de diseño
 Estático pero ps ahí va creciendo la mota
 
 Update: 2do diseño
-
 EN PROCESO:
- -Glitches de título
- -Hacer galería
+-Tener ganas
 
 COMPLETADO:
 -Hacer una carpeta para guardar ahí los archivos del primer diseño
@@ -21,11 +19,10 @@ COMPLETADO:
 -Mejorar distribución de secciones
 
 PENDIENTE:
--Scroll-snap enhancement
+-Scroll enhancement
 -Optimizar rendimiento (lazy loading, prefetch)
-
-
-
+-Glitches de título
+-Hacer galería
 
 12/01/2021 - Hoy fue un buen día porque compré unos audífonos
 13/01/2021 - Hoy fue un mejor día porque ya me llegaron mis audífonos

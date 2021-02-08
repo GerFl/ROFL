@@ -8,43 +8,16 @@
         console.clear();
         console.log("Sitio hecho para Ricardo Flores Olvera.");
         console.log("Desarrollado por Gerardo Flores Ramírez.");
-        console.log("ADVERTENCIA: Los errores que se muestran en consola al pasar el cursor sobre el área del sidebar no son importantes y no afectan la ejecución de la página, son solo detalles que surgieron por una de las funciones implementadas en este mismo script, pero no son relevantes. De igual manera se buscará una mejor manera de obtener el mismo resultado (zoom y encabezado que se añade) de una manera que no lanze alertas.");
-        // alert(window.innerWidth);
+        const tamanopantalla = window.innerWidth;
+        if (tamanopantalla < 768) {
+            window.location.href = 'index.html';
+        }
         eventListeners();
 
-
         function eventListeners() {
-            // Listeners para mostrar el name
-            // document.querySelector('.sidebar').addEventListener('mouseover', paso);
             // Menú móvil
             document.querySelector('.logo a.barras').addEventListener('click', menumovilabrir);
             document.querySelector('.logo a.close').addEventListener('click', menumovilcerrar);
-        }
-
-        function paso(e) {
-            e.preventDefault();
-            const cursor = e.target.id;
-            //console.log(cursor);
-            //console.log("Pasaste sobre el sidebar");
-            document.querySelector('.proyecto #' + cursor).addEventListener('mouseover', mostrar);
-            document.querySelector('.proyecto #' + cursor).addEventListener('mouseleave', ocultar);
-            // style="color:#c77210"
-        }
-
-        function mostrar(e) {
-            e.preventDefault();
-            const cursor = e.target.id;
-            //console.log(cursor);
-            document.querySelector(".proyecto #" + cursor + " p").style.display = "block";
-            //console.log(e.target);
-        }
-
-        function ocultar(e) {
-            e.preventDefault();
-            const cursor = e.target.id;
-            //console.log(cursor);
-            document.querySelector(".proyecto #" + cursor + " p").style.display = "none";
-            //console.log(e.target);
         }
 
         function menumovilabrir(e) {
