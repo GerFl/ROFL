@@ -267,6 +267,7 @@ div.imagenes img.grid-column24 {
 
 div.imagenes img.grid-column35 {
     grid-column: 3 / 5;
+    height:100%;
 }
 
 
@@ -282,7 +283,6 @@ div.video iframe {
     width: 90%;
 }
 /* COMERCIAL */
-img.grid-column13.grid-row23{
+img.acomodesealv{
     grid-column:1/3;
-    width:10%;
 }
