@@ -43,6 +43,7 @@ html {
     background-color: #000000;
     /*scroll-snap-type: y mandatory;*/
     user-select: none;
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -128,9 +129,9 @@ p {
 */
 
 section {
-    margin: 0 auto;
     margin-bottom: 1rem;
     padding: 0 2rem;
+    padding-top:1rem;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -198,7 +199,6 @@ section.seccion3 {
 div.sidebar {
     display: flex;
     width: 40%;
-    border: 5px dotted cyan;
 }
 
 
@@ -212,35 +212,25 @@ div.sidebar .bots {
     flex-direction: column;
     justify-content: space-between;
     width: 30%;
-    border: 1px solid cadetblue;
 }
 
 div.nombre {
-    border: 1px dotted red;
     height: 33.3%;
+    margin-top:2rem;
 }
 
 div.nombre h2 {
-    border: 1px solid pink;
     font-family: 'Swis';
     font-weight: 300;
     font-size: 2.5rem;
     margin: 0;
 }
 
-
-/*div.nombre img {
-    display: block;
-    width: 100%;
-    margin: 0;
-}*/
-
 div.nombre h2:nth-child(2) {
     margin-left: 2rem;
 }
 
 div.barras .box1 {
-    border: 1px solid blue;
     border-left: 0;
     border-right: 0;
     height: 100%;
@@ -248,12 +238,10 @@ div.barras .box1 {
 
 div.barras .box2 {
     height: 1rem;
-    border-bottom: 1px solid blue;
 }
 
 div.barras {
     height: 33.3%;
-    border: 1px solid yellow;
     display: flex;
     flex-direction: column;
     padding: 50% 0;
@@ -268,8 +256,8 @@ div.arrows {
     height: 33.3%;
     display: flex;
     flex-direction: column;
-    border: 1px solid green;
     justify-content: flex-end;
+    width:3rem;
 }
 
 
@@ -289,17 +277,21 @@ div.arrows i {
 div.lettering {
     display: flex;
     width: 70%;
-    border: 1px dotted orange;
     align-self: center;
     margin-left: 4rem;
 }
 
 div.lettering .letras {
-    width: 50%;
+    width: 33%;
+    align-self: flex-start;
+}
+section.seccion3 .letras{
+    width:43%;
 }
 
 div.lettering .letritas {
     width: 50%;
+    align-self: flex-start;
 }
 
 section div.lettering .letras h2 {
@@ -316,7 +308,6 @@ section div.lettering .letritas h3 {
 
 div.vacio {
     height: 30%;
-    border: 1px solid pink;
 }
 
 
@@ -325,7 +316,6 @@ div.vacio {
 div.contenido {
     width: 100%;
     display: flex;
-    border: 1px dotted yellowgreen;
 }
 
 div.contenido img {
@@ -333,18 +323,21 @@ div.contenido img {
     width: 90%;
     margin: 0 auto;
     align-self: center;
-    border: 5px dotted gold;
 }
-
-div.grid-proyectos {
+div.flexes{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+}
+div.flex-proyectos {
     width: 100%;
     height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    /*grid-template-rows: 1fr 0.2fr 1fr;*/
-    border: 1px solid green;
-    row-gap: 2em;
-    align-self: center;
+    display: flex;
+    justify-content: space-between;
+}
+div.flex-proyectos:nth-child(2){
+    width:70%;
+    margin: 2rem auto;
 }
 
 
@@ -352,9 +345,9 @@ div.grid-proyectos {
 
 div.proyectos {
     position: relative;
-    background-color: black;
+    background-color: #000;
     width: 15rem;
-    height: 20rem;
+    height: 19rem;
     margin: 0 auto;
     align-self: center;
 }
@@ -366,7 +359,7 @@ div.skeleton {
     border: 1px solid white;
     position: absolute;
     left: 50%;
-    bottom: -3rem;
+    bottom: -2rem;
     transform: translateX(-50%);
     width: 80%;
     height: 70%;
@@ -375,7 +368,7 @@ div.skeleton {
 div.skeleton img {
     position: absolute;
     bottom: -3rem;
-    width: 40%;
+    width: 37%;
     right: 3.5rem;
 }
 
@@ -383,13 +376,11 @@ div.skeleton img {
 /* CAPA 3 */
 
 .foreground {
-    position: absolute;
-    width: 100%;
+    position: absolute;;
     top: 2rem;
     left: 50%;
     transform: translateX(-50%);
-    border: 1px solid red;
-    padding: 50% 60%;
+    padding: 50% 70%;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -425,142 +416,40 @@ div.skeleton img {
     left: 0;
     bottom: 0;
     font-family: 'Ricochet';
+    border:1px solid red;
 }
 
 .text a {
     position: absolute;
-    top: 1rem;
+    top: 0;
     right: 0;
     left: 0;
-    text-align: center;
-    font-weight: 300;
+    font-weight: 700;
     font-size: 1.5rem;
     width: 100%;
     height: 100%;
+    display:none;
+    border:1px solid pink;
+    padding:1rem;
 }
 
 .text a p {
     font-size: 1.7rem;
+    font-weight: 300;
+    border:1px solid blue;
 }
 
 .text:hover {
     background-color: rgb(208, 82, 54);
-    transition: .3s ease-in-out;
+    transition: .7s ease-in-out;
+}
+.text:hover a{
+    display:block;
+    transition: .7s ease-in-out;
 }
 
 
-/* div.sidebar {
-    display: block;
-    background-color: rgb(244, 244, 244, 0.5);
-    color: black;
-    font-size: 2rem;
-    text-align: center;
-    padding: 1rem;
-}
 
-div.sidebar h2 {
-    margin: 1rem;
-    color: rgba(0, 0, 0, 0.7);
-    font-family: 'Ricochet';
-}
-
-div.volteado {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-div.volteado h2,
-span {
-    color: rgb(255, 255, 255, 0.7);
-} */
-
-
-/* Menú de hamburgruesa */
-
-
-/* div.logo a {
-    display: block;
-}
-
-div.iconos {
-    display: none;
-}
-
-div.logo a.menu-movil i {
-    color: white;
-    font-size: 1.8rem;
-}
-
-div.logo a.close {
-    display: none;
-} */
-
-
-/* div.iconos:target {
-    display: flex;
-} */
-
-
-/* div.proyecto {
-    margin: 1rem 0;
-}
-
-div.proyecto a img {
-    width: 60%;
-}
-
-div.sidebar a p {
-    margin: 0;
-    display: none;
-    font-size: 2rem;
-}
-
-div.volteado a p {
-    color: rgb(244, 244, 244, 0.5);
-}
-
-div.volteado img {
-    -webkit-filter: invert(1);
-}
-
-@media (min-width: 768px) {
-    div.sidebar {
-        width: 30%;
-        height: 120rem;
-        display: block;
-    }
-    div.sidebar .logo {
-        margin: 2rem 0;
-    }
-    div.sidebar h2 {
-        display: block;
-        font-size: 5rem;
-    }
-    div.sidebar span {
-        font-size: 2.5rem;
-    }
-    div.iconos {
-        display: block;
-    }
-    div.sidebar .zoom a {
-        text-align: center;
-        margin: 1rem 0;
-        font-size: 3.5rem;
-        padding: 2rem;
-        display: block;
-        color: rgba(0, 0, 0, 0.7);
-    }
-    div.sidebar .zoom a:hover {
-        transform: scale(1.5);
-        transition: .4s ease-in-out;
-    }
-    div.proyecto a img {
-        width: 40%;
-        opacity: .7;
-    }
-    div.logo a.menu-movil i {
-        display: none;
-    }
-} */
 
 
 /* I push my fingers into my EEEEEEEEEYEESSSSSS */
@@ -568,23 +457,24 @@ div.volteado img {
 
 /* MAIN */
 
+
 div.pagina-proyecto .sidebar {
     display: flex;
     flex-direction: column;
-    border: 1px dotted orange;
     margin-top: 3rem;
     text-align: center;
+    height: 90%;
+    justify-content: space-between;
+    align-self: center;
 }
 
 div.pagina-proyecto .arriba img {
     width: 10rem;
     margin: 0;
-    border: 1px dotted blue;
 }
 
 div.pagina-proyecto .medio {
     display: flex;
-    border: 1px dotted pink;
 }
 
 div.pagina-proyecto .medio .iconos {
@@ -593,11 +483,9 @@ div.pagina-proyecto .medio .iconos {
     width: 50%;
     margin-top: 4rem;
     padding-left: 3rem;
-    border: 1px dotted red;
 }
 
 div.medio .iconos a {
-    border: 1px dotted gold;
     width: 6rem;
     margin-bottom: 10%;
 }
@@ -619,16 +507,15 @@ div.medio .actual h2 {
 
 div.pagina-proyecto .abajo {
     height: 20%;
-    border: 1px dotted brown;
     width: 100%;
 }
 
 div.abajo .arrows {
     flex-direction: row;
-    border: 1px dashed green;
     height: 100%;
     width: 7rem;
     align-items: flex-end;
+    padding-bottom:1rem;
 }
 
 div.abajo .arrows i {
@@ -655,9 +542,12 @@ div.layout {
 
 div.imagenes {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    border: 2px dashed purple;
+    grid-template-columns: repeat(6, 16.667%);
+    grid-template-rows: repeat(3, 33.334%);
+}
+div.imagenes img{
+    height:100%;
+    width:100%;
 }
 
 div.imagenes.videos {
@@ -665,14 +555,14 @@ div.imagenes.videos {
 }
 
 div.imagenes.unshingo {
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 20%);
 }
 
 div.imagenes img {
     padding: 1rem;
-    width: 100%;
-    height: 100%;
     object-fit: cover;
+    width:100%;
+    height:100%;
 }
 
 div.imagenes img:hover {
@@ -682,16 +572,26 @@ div.imagenes img:hover {
 
 div.imagenes img.grid-column13 {
     grid-column: 1 / 3;
-    width: 100%;
-    height: 100%;
 }
 
 div.imagenes img.grid-column13 {
     grid-column: 1 / 3;
 }
 
+div.imagenes img.grid-column24 {
+    grid-column: 2 / 4;
+}
+
 div.imagenes img.grid-column35 {
     grid-column: 3 / 5;
+}
+
+div.imagenes img.grid-column46 {
+    grid-column: 4 / 6;
+}
+
+div.imagenes img.grid-column47 {
+    grid-column: 4 / 7;
 }
 
 div.imagenes img.grid-column57 {
@@ -706,6 +606,10 @@ div.imagenes img.grid-column67 {
     grid-column: 6 / 7;
 }
 
+div.imagenes img.grid-column36 {
+    grid-column: 3 / 6;
+}
+
 div.imagenes img.grid-column37 {
     grid-column: 3 / 7;
 }
@@ -716,38 +620,23 @@ div.imagenes img.grid-row12 {
 
 div.imagenes img.grid-row13 {
     grid-row: 1 / 3;
-    width: 100%;
-    height: 100%;
 }
 
 div.imagenes img.grid-row23 {
     grid-row: 2 / 3;
 }
 
+div.imagenes img.grid-row24 {
+    grid-row: 2 / 4;
+}
+
 div.imagenes img.grid-row34 {
     grid-row: 3 / 4;
 }
-img.justgrow {
-    width: 100%;
-    align-items: center;
-    align-content: center;
+
+div.imagenes img.grid-row46 {
+    grid-row: 4 / 6;
 }
-
-/* RECORRIDOS VIRTUALES */
-
-
-/* div.video {
-    width: auto;
-    height: auto;
-    text-align: center;
-}
-
-div.video iframe {
-    width: 90%;
-}
-
-*/
-
 
 /* RANDOM TESTS */
 
@@ -806,47 +695,3 @@ div.video iframe {
     animation-delay: 1.2s;
 }
 */
-
-
-/*
-.pruebaflechas {
-    margin: 5rem;
-    padding: 3rem;
-}
-
-.flecha {
-    width: 20px;
-    height: 20px;
-}
-
-.flecha:before {
-    content: "";
-    width: 20px;
-    height: 20px;
-    opacity: 0.7;
-    animation: loading 2s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes loading {
-    100% {
-        transform: scale(3);
-        opacity: 0;
-    }
-}
-
-.flecha:nth-child(2):before {
-    animation-delay: 0.3s;
-}
-
-.flecha:nth-child(3):before {
-    animation-delay: 0.6s;
-}
-
-.flecha:nth-child(4):before {
-    animation-delay: 0.9s;
-}
-
-.flecha:nth-child(5):before {
-    animation-delay: 1.2s;
-}*/
