@@ -2,8 +2,8 @@
     "use strict";
     document.addEventListener('DOMContentLoaded', function() {
         console.clear();
-        console.log("Sitio hecho para Ricardo Flores Olvera.");
-        console.log("Desarrollado por Gerardo Flores Ramírez.");
+        console.log("Sitio hecho para Ricardo Flores.");
+        console.log("Desarrollado por Gerardo Flores.");
 
         const redireccionar=document.querySelector('#new');
         if(redireccionar){
