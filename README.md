@@ -6,7 +6,7 @@ Estático pero ps ahí va creciendo la mota
 Update: 2do diseño
 EN PROCESO:
 -Tener ganas
--Redimensionar para densidades más grandes
+-Redimensionar para densidades más grandes (1024px width)
 
 COMPLETADO:
 -Hacer una carpeta para guardar ahí los archivos del primer diseño
@@ -29,3 +29,6 @@ PENDIENTE:
 
 12/01/2021 - Hoy fue un buen día porque compré unos audífonos
 13/01/2021 - Hoy fue un mejor día porque ya me llegaron mis audífonos
+
+@media only screen and (min-width:1600px){
+}

@@ -9,9 +9,6 @@
             <source srcset="img/blog1.webp" type="image/webp">
             <img src="img/blog1.jpg">
         </picture>
-
-        Modernizr
-
 */
 
 html {
@@ -159,10 +156,21 @@ div.tags .lang p {
     font-family: 'Zrnic';
 }
 
+@media only screen and (min-width:1600px){
 
-/*section .bots {
-    justify-content: center
-}*/
+    div.tags {
+        width: 8rem;
+        bottom: 1rem;
+        right: 10rem;
+    }
+
+    div.tags .lang p {
+        top: -1.5rem;
+        margin-left: 12%;
+        font-size: 2rem;
+    }
+}
+
 
 section.seccion1 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../arrebajaoenlabanera/proyectocomercial/comercial6.webp);
@@ -215,6 +223,17 @@ div.nombre h2 {
 div.nombre h2:nth-child(2) {
     margin-left: 2rem;
 }
+@media only screen and (min-width:1600px){
+    div.nombre{
+        margin-top:4rem;
+    }
+    div.nombre h2{
+        font-size: 3.5rem;   
+    }
+    div.nombre h2:nth-child(2) {
+    margin-left: 2.5rem;
+}
+}
 div.vacio {
     height: 40%;
     width:100%;
@@ -242,6 +261,21 @@ div.barras p {
     height: 1rem;
 }
 
+@media only screen and (min-width:1600px){
+
+    div.barras .box2 {
+        height: 2rem;
+    }
+
+    div.barras {
+        padding: 50% 0;
+    }
+
+    div.barras p {
+        height: 2rem;
+    }
+}
+
 div.arrows {
     height: 33.3%;
     display: flex;
@@ -264,6 +298,7 @@ div.arrows {
     border-left:1px solid #383030!important;
 }
 
+
 section.seccion3 .marco{
     border-right: 1px solid #383030;
     border-bottom: 1px solid #383030;
@@ -274,6 +309,11 @@ section.seccion3 .marco{
 div.arrows i {
     font-size: 3rem;
     animation: zoomflecha 1s infinite;
+}
+@media only screen and (min-width:1600px){
+    div.arrows i {
+        font-size: 3.8rem;
+    }
 }
 
 @keyframes zoomflecha {
@@ -315,7 +355,17 @@ section div.lettering .letritas h3 {
     border-left: 1px solid white;
 }
 
+@media only screen and (min-width:1600px){
 
+    section div.lettering .letras h2 {
+        font-size: 10rem;
+    }
+
+    section div.lettering .letritas h3 {
+        padding-left:3rem;
+        font-size: 5rem;
+    }
+}
 
 /* CONTENIDO */
 
@@ -375,7 +425,8 @@ div.skeleton img {
     position: absolute;
     bottom: -3rem;
     width: 37%;
-    right: 3.5rem;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 
@@ -452,6 +503,40 @@ div.skeleton img {
 }
 
 
+@media only screen and (min-width:1600px){
+    /* CAPA 1 */
+    div.proyectos {
+        width: 20rem;
+        height: 25rem;
+        margin: 0 auto;
+    }
+    /* CAPA 2 */
+    div.skeleton {
+        left: 50%;
+        bottom: -4rem;
+        transform: translateX(-50%);
+        width: 80%;
+        height: 100%;
+    }
+    div.skeleton img {
+        bottom: -5rem;
+        width: 50%;
+    }
+    .foreground {
+        top: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 50% 70%;
+    }
+    /* CAPA 4 */
+    .text a {
+        font-size: 2.4rem;
+    }
+    .text a p {
+        font-size: 2.3rem;
+    }
+}
+
 /* SECCION 3 - ABOUT ME */
 .cards{
     display:flex;
@@ -486,6 +571,22 @@ div.skeleton img {
     height: 100% !important;
     width:100% !important;
     border-radius: inherit;
+}
+@media only screen and (min-width:1600px){
+    .cards .circulos{
+        width:50%;
+        margin-top:27rem;
+    }
+    .cards .circulo1{
+        height:25rem;
+        width:25rem;
+    }
+    .circulo2{
+        top:5rem;
+        right:-8rem;
+        height:28rem;
+        width:28rem;
+    }
 }
 .info{
     width:35rem;
@@ -539,6 +640,41 @@ div.skeleton img {
     margin:1rem;
     font-size:2.8rem;
     align-self: center;
+}
+
+@media only screen and (min-width:1600px){
+    .info{
+        width:45rem;
+        height:50rem;
+        padding:4rem;
+        margin:13rem 4rem;
+    }
+    .info h3{
+        font-size:4rem;
+    }
+    .info p.tedmosby{
+        font-size:1.7rem;
+        margin-left:7rem;
+    }
+    .info p{
+        font-size:1.3rem;
+        line-height: 2;
+    }
+    .info p:nth-child(3){
+        margin-top:7rem;
+    }
+    .icons{
+        margin-top:22rem;
+        margin-left:3rem;
+    }
+    .icons>p{
+        margin:0 !important;
+        font-size:2rem !important;
+    }
+    .icons p i{
+        margin:1.2rem;
+        font-size:3.2rem;
+    }
 }
 
 /* I push my fingers into my EEEEEEEEEYEESSSSSS */
@@ -616,6 +752,38 @@ div.abajo .arrows i {
 @keyframes flechaizquierda {
     60% {
         margin-left: 0.3rem;
+    }
+}
+
+@media only screen and (min-width:1600px){
+    div.pagina-proyecto .sidebar {
+        margin-top: 5rem;
+        height: 90%;
+    }
+    div.pagina-proyecto .arriba img {
+        width: 18rem;
+        margin: 0;
+    }
+    div.pagina-proyecto .medio .iconos {
+        width: 50%;
+        margin-top: 4rem;
+        padding-left: 3rem;
+    }
+    div.medio .iconos a {
+        width: 10rem;
+        margin-bottom: 12%;
+    }
+    div.medio .actual {
+        margin-top: 1rem;
+    }
+    div.medio .actual h2 {
+        font-size: 6rem;
+    }
+    div.abajo .arrows {
+        width: 7rem;
+    }
+    div.abajo .arrows i {
+        font-size: 3.8rem;
     }
 }
 
