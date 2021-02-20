@@ -350,6 +350,7 @@ section div.lettering .letras h2 {
 
 section div.lettering .letritas h3 {
     margin: 0;
+    padding-top:1rem;
     padding-left:1rem;
     font-size: 3rem;
     border-left: 1px solid white;
@@ -761,7 +762,7 @@ div.abajo .arrows i {
         height: 90%;
     }
     div.pagina-proyecto .arriba img {
-        width: 18rem;
+        width: 12rem;
         margin: 0;
     }
     div.pagina-proyecto .medio .iconos {
@@ -777,7 +778,7 @@ div.abajo .arrows i {
         margin-top: 1rem;
     }
     div.medio .actual h2 {
-        font-size: 6rem;
+        font-size: 5rem;
     }
     div.abajo .arrows {
         width: 7rem;
@@ -819,80 +820,111 @@ div.imagenes.unshingo {
 
 div.imagenes img {
     padding: 1rem;
-    object-fit: cover;
     width:100%;
     height:100%;
 }
 
-div.imagenes img:hover {
+div.imagenes .padre{
+    position:relative;
+}
+div.padre img.work{
+    object-fit: cover;
+}
+div.padre img.imagenhija{
+    display:none;
+}
+
+@media only screen and (min-width:1366px){
+    div.padre .foregroundZoom{
+    background-color: rgb(208, 82, 54);
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    display:none;
+    }
+    div.padre img.imagenhija{
+        display:flex;
+    }
+
+    div.padre:hover .foregroundZoom{
+        display:flex;
+    }
+
+    div.foregroundZoom img{
+        height:10rem;
+        width:15rem;
+    }
+}
+
+
+div.padre img:hover {
     transform: scale(1.045);
     transition: .3s ease-in-out;
 }
 
-div.imagenes img.grid-column13 {
+
+div.imagenes .grid-column13 {
     grid-column: 1 / 3;
 }
 
-div.imagenes img.grid-column13 {
-    grid-column: 1 / 3;
-}
-
-div.imagenes img.grid-column24 {
+div.imagenes .grid-column24 {
     grid-column: 2 / 4;
 }
 
-div.imagenes img.grid-column35 {
+div.imagenes .grid-column35 {
     grid-column: 3 / 5;
 }
 
-div.imagenes img.grid-column46 {
+div.imagenes .grid-column46 {
     grid-column: 4 / 6;
 }
 
-div.imagenes img.grid-column47 {
+div.imagenes .grid-column47 {
     grid-column: 4 / 7;
 }
 
-div.imagenes img.grid-column57 {
+div.imagenes .grid-column57 {
     grid-column: 5 / 7;
 }
 
-div.imagenes img.grid-column56 {
+div.imagenes .grid-column56 {
     grid-column: 5 / 6;
 }
 
-div.imagenes img.grid-column67 {
+div.imagenes .grid-column67 {
     grid-column: 6 / 7;
 }
 
-div.imagenes img.grid-column36 {
+div.imagenes .grid-column36 {
     grid-column: 3 / 6;
 }
 
-div.imagenes img.grid-column37 {
+div.imagenes .grid-column37 {
     grid-column: 3 / 7;
 }
 
-div.imagenes img.grid-row12 {
+div.imagenes .grid-row12 {
     grid-row: 1 / 2;
 }
 
-div.imagenes img.grid-row13 {
+div.imagenes .grid-row13 {
     grid-row: 1 / 3;
 }
 
-div.imagenes img.grid-row23 {
+div.imagenes .grid-row23 {
     grid-row: 2 / 3;
 }
 
-div.imagenes img.grid-row24 {
+div.imagenes .grid-row24 {
     grid-row: 2 / 4;
 }
 
-div.imagenes img.grid-row34 {
+div.imagenes .grid-row34 {
     grid-row: 3 / 4;
 }
 
-div.imagenes img.grid-row46 {
+div.imagenes .grid-row46 {
     grid-row: 4 / 6;
 }

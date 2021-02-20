@@ -6,7 +6,8 @@ Estático pero ps ahí va creciendo la mota
 Update: 2do diseño
 EN PROCESO:
 -Tener ganas
--Redimensionar para densidades más grandes (1024px width)
+-
+
 
 COMPLETADO:
 -Hacer una carpeta para guardar ahí los archivos del primer diseño
@@ -22,6 +23,7 @@ COMPLETADO:
 -Barrita nueva
 -About me
 -Optimizar rendimiento (lazy loading, prefetch)
+-Redimensionar para densidades más grandes (1024px width)
 
 PENDIENTE:
 -Glitches de título
