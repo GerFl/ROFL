@@ -9,7 +9,7 @@
         if(redireccionar){
             const tamanopantalla = window.innerWidth;
             if(tamanopantalla<768){
-                window.location.href='index.html';
+                window.location.href='olddesign/oldie.html';
             }
         }
 
