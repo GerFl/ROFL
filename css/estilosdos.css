@@ -831,6 +831,9 @@ div.padre img.work{
 }
 div.padre img.imagenhija{
     display:none;
+    position:relative;
+    top:50%;
+    transform:translateY(-50%);
 }
 
 @media only screen and (min-width:1366px){
@@ -858,7 +861,7 @@ div.padre img.imagenhija{
 }
 
 
-div.padre img:hover {
+div.padre img.work:hover {
     transform: scale(1.045);
     transition: .3s ease-in-out;
 }
