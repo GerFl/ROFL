@@ -851,7 +851,8 @@ div.padre img.imagenhija{
     }
 
     div.padre:hover .foregroundZoom{
-        display:block;
+        display:none;
+        cursor: pointer;
     }
 
     div.foregroundZoom img{
@@ -864,6 +865,7 @@ div.padre img.imagenhija{
 div.padre img.work:hover {
     transform: scale(1.045);
     transition: .3s ease-in-out;
+    cursor: pointer;
 }
 
 
@@ -932,4 +934,27 @@ div.imagenes .grid-row46 {
 }
 div.imagenes .grid-row35 {
     grid-row: 3 / 5;
+}
+
+/* LIGHTBOX */
+#lightbox{
+    position:fixed;
+    z-index:1000;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,.8);
+    display:none;
+}
+#lightbox.active{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#lightbox img{
+    max-width:80%;
+    max-height: 90%;
+    padding:4px;
+    background-color:black;
+    border:2px solid white;
 }
