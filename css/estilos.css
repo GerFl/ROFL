@@ -3,6 +3,7 @@ html {
     font-size: 62.5%;
     /**Reset para REMS - 62.5% = 10px de 16px*/
     background-color: #000000;
+    user-select: none;
 }
 
 @font-face {
@@ -228,6 +229,7 @@ div.imagenes img {
     display: block;
     padding: 1rem;
     width: 100%;
+    cursor:pointer;
 }
 
 @media (min-width: 768px) {
@@ -300,4 +302,26 @@ div.video {
 
 div.video iframe {
     width: 90%;
+}
+/* LIGHTBOX */
+#lightbox{
+    position:fixed; /* Creo que esto es para indicar que es un elemento con un flow diferente a todo el documento B) */
+    z-index:1000; /* Se respetará sí o sí esta capa por encima de todo el contenido */
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,.8); /* Se crea un filtro negro para toda la página, que servirá de fondo cuando la imagen esté superpuesta */
+    display:none; /* En caso de que no se diera un display:none se mostraría en toda la página el filtro negro*/
+}
+#lightbox.active{
+    display:flex; /* Mostrar el lightbox, osea activar el filtro negro */
+    justify-content: center; /* Esto centrará todo lo que se ponga dentro */
+    align-items: center; /* Esto centrará todo lo que se ponga dentro */
+}
+#lightbox img{
+    max-width:80%; /* Dimensiones para las imágenes obviamente */
+    max-height: 90%;
+    padding:4px;
+    background-color:black;
+    border:2px solid white;
 }

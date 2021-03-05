@@ -542,29 +542,30 @@ div.skeleton img {
 .cards{
     display:flex;
     width:100%;
+    padding-top:10%;
 }
 .cards .circulos{
     width:50%;
     position:relative;
     display: flex;
     justify-content: flex-end;
-    margin-top:19rem;
+    margin-top:15rem;
 }
 .circulo1, .circulo2{
     border-radius: 50%;
 }
 .cards .circulo1{
     position:absolute;
-    height:17rem;
-    width:17rem;
+    height:18rem;
+    width:18rem;
     background-color:rgb(239, 212, 195);
 }
 .circulo2{
     position:absolute;
     top:5rem;
     right:-8rem;
-    height:20rem;
-    width:20rem;
+    height:21rem;
+    width:21rem;
 }
 
 .circulo2 img{
@@ -847,11 +848,11 @@ div.padre img.imagenhija{
     display:none;
     }
     div.padre img.imagenhija{
-        display:flex;
+        display:block;
     }
 
     div.padre:hover .foregroundZoom{
-        display:none;
+        display:block;
         cursor: pointer;
     }
 
@@ -938,21 +939,21 @@ div.imagenes .grid-row35 {
 
 /* LIGHTBOX */
 #lightbox{
-    position:fixed;
-    z-index:1000;
+    position:fixed; /* Creo que esto es para indicar que es un elemento con un flow diferente a todo el documento B) */
+    z-index:1000; /* Se respetará sí o sí esta capa por encima de todo el contenido */
     top:0;
     width:100%;
     height:100%;
-    background-color:rgba(0,0,0,.8);
-    display:none;
+    background-color:rgba(0,0,0,.8); /* Se crea un filtro negro para toda la página, que servirá de fondo cuando la imagen esté superpuesta */
+    display:none; /* En caso de que no se diera un display:none se mostraría en toda la página el filtro negro*/
 }
 #lightbox.active{
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    display:flex; /* Mostrar el lightbox, osea activar el filtro negro */
+    justify-content: center; /* Esto centrará todo lo que se ponga dentro */
+    align-items: center; /* Esto centrará todo lo que se ponga dentro */
 }
 #lightbox img{
-    max-width:80%;
+    max-width:80%; /* Dimensiones para las imágenes obviamente */
     max-height: 90%;
     padding:4px;
     background-color:black;
