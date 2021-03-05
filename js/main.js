@@ -64,6 +64,7 @@
             })
         });
 
+        /* HABILITAR LIGHTBOX PARA EL DISEÑO VIEJO */
         const imagenDisenoViejo=document.querySelectorAll('.vieja');
         imagenDisenoViejo.forEach(imagen=>{
             imagen.addEventListener('click',e=>{
@@ -88,25 +89,32 @@
         /* LIGHTBOX */
 
         /* Perros tags */
+        /* Esto está bien hardcodeado, lo sé, no lo abras xD */
         if(redireccionar){
             const pagindex=document.querySelector('#index');
             const pagcomercial=document.querySelector('#pagComercial');
             const pagresidencial=document.querySelector('#pagResidencial');
             const pagrecorridos=document.querySelector('#pagRecorridos');
-            const pagrenders=document.querySelector('#renders');
             const tagEspanol=document.querySelector('.lang.espanol');
             const tagIngles=document.querySelector('.lang.ingles');
-            const proyectoComercial=document.querySelector('a#proyectocomercial p');
-            const proyectoResidencial=document.querySelector('a#proyectoresidencial p');
-            const renders=document.querySelector('a#renders p');
-            const disenoGrafico=document.querySelector('a#disenografico p');
-            const recorridosVirtuales=document.querySelector('a#recorridosvirtuales p');
+            const titulocomercial=document.querySelector('a#proyectocomercial p#titulo');
+            const tituloresidencial=document.querySelector('a#proyectoresidencial p#titulo');
+            const titulodiseno=document.querySelector('a#disenografico p#titulo');
+            const titulorecorrido=document.querySelector('a#recorridosvirtuales p#titulo');
+            const proyectoComercial=document.querySelector('a#proyectocomercial p#description');
+            const proyectoResidencial=document.querySelector('a#proyectoresidencial p#description');
+            const renders=document.querySelector('a#renders p#curseado');
+            const disenoGrafico=document.querySelector('a#disenografico p#description');
+            const recorridosVirtuales=document.querySelector('a#recorridosvirtuales p#description');
             const tedMosby=document.querySelector('p#tedmosby');
             const descripcion=document.querySelector('p#texto');
             const residential=document.querySelector('h2#tial');
+            const commercial=document.querySelector('h2#mmer');
+            const gra=document.querySelector('h2#gra');
+            const fi=document.querySelector('h2#fi');
+            const co=document.querySelector('h2#co');
             tagEspanol.addEventListener('click',e=>{
                 e.preventDefault();
-                alert("Diste click en spanish.");
                 if(pagindex){
                     proyectoComercial.innerText="Desarrollo de estrategias de función y estética";
                     proyectoResidencial.innerText="Proyección de comfortabilidad acorde al usuario";
@@ -115,31 +123,52 @@
                     disenoGrafico.innerText="Conceptualización de identidad y desarrollo de ideas";
                     tedMosby.innerText="Arquitecto";
                     descripcion.innerText="Apasionado por el diseño en todas sus variantes; experiencia en Interiorismo, diseño arquitectónico y diseño industrial; supervisión de obra. Aficionado del diseño gráfico y técnicas de diseño digital.";                
+                    titulocomercial.innerText="Proyecto comercial";
+                    tituloresidencial.innerText="Proyecto residencial";
+                    titulodiseno.innerText="Diseño grafico";
+                    titulorecorrido.innerText="Recorridos virtuales";
                 }
                 if(pagresidencial){
                     residential.innerText="CIAL.";
                 }
-
-
+                if(pagcomercial){
+                    commercial.innerText="MER";
+                }
+                if(pagdiseno){
+                    gra.innerText="GRA";
+                    fi.innerText="FI";
+                    co.style.display="block";
+                }
             });
             tagIngles.addEventListener('click',e=>{
                 e.preventDefault();
-                alert("Diste click en inglish.");
                 if(pagindex){
-                    proyectoComercial.innerText="Khe1";
-                    proyectoResidencial.innerText="Khe2";
-                    renders.innerText="Khe3";
-                    disenoGrafico.innerText="Khe4";
-                    recorridosVirtuales.innerText="Khe5";
+                    proyectoComercial.innerText="Aesthetical strategies and functionality development";
+                    proyectoResidencial.innerText="Comfort projects for the user experience";
+                    renders.innerText="Professinal design coworking";
+                    disenoGrafico.innerText="Identity conceptualization and development";
+                    recorridosVirtuales.innerText="Cinematogtaphic representation of ideas";
                     tedMosby.innerText="Architect";
-                    descripcion.innerText="Jeje";                
+                    descripcion.innerText="Passionate about design, experienced in interior, architectural & industrial design development. Enthusiastic about graphic design and other digital technics.";                
+                    titulocomercial.innerText="Commercial";
+                    tituloresidencial.innerText="Residential";
+                    titulodiseno.innerText="Graphic";
+                    titulorecorrido.innerText="Virtual tour";
                 }
                 if(pagresidencial){
                     residential.innerText="TIAL."
                 }
+                if(pagcomercial){
+                    commercial.innerText="MMER";
+                }
+                if(pagdiseno){
+                    gra.innerText="GRA";
+                    fi.innerText="PHIC.";
+                    co.style.display="none";
+                }
             });
         }
-
+        /* 16/12/2020 */
         /* Fany me dijo "Te quiero mucho" y fue lo primero que leí en el día y me hizo muy feliz */
     }); // DOM CONTENT LOADED
 })();
