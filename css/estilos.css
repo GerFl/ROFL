@@ -22,20 +22,22 @@ html {
     box-sizing: inherit;
 }
 
-::-webkit-scrollbar{
-    width:15px;
+::-webkit-scrollbar {
+    width: 15px;
 }
-::-webkit-scrollbar-track{
-    background-color:#1d191f;
+
+::-webkit-scrollbar-track {
+    background-color: #1d191f;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background-color: rgb(208, 82, 54);
-    border-radius:15px;
+    border-radius: 15px;
 }
 
 :root {
     scrollbar-color: #d05236 #1D191F !important;
-    scrollbar-width:thin !important;
+    scrollbar-width: thin !important;
 }
 
 a {
@@ -67,27 +69,27 @@ main {
 }
 
 div.contenedor.landpage {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../arrebajaoenlabanera/disenografico/disenofondo.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../arrebajaoenlabanera/disenografico/disenofondo.webp);
 }
 
 div.contenedor.fondodisenografico {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../arrebajaoenlabanera/disenografico/disenofondo.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../arrebajaoenlabanera/disenografico/disenofondo.webp);
 }
 
 div.contenedor.fondoproyectocomercial {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../arrebajaoenlabanera/proyectocomercial/comercialfondo.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../arrebajaoenlabanera/proyectocomercial/comercialfondo.webp);
 }
 
 div.contenedor.fondoproyectoresidencial {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../arrebajaoenlabanera/proyectoresidencial/residencialfondo.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../arrebajaoenlabanera/proyectoresidencial/residencialfondo.webp);
 }
 
 div.contenedor.fondorenders {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../arrebajaoenlabanera/renders/rendersfondo.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../arrebajaoenlabanera/renders/rendersfondo.webp);
 }
 
 div.contenedor.fondorecorridos {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../arrebajaoenlabanera/recorridosfondo.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../arrebajaoenlabanera/recorridosfondo.webp);
 }
 
 img {
@@ -169,6 +171,10 @@ div.volteado img {
     -webkit-filter: invert(1);
 }
 
+div.volteado.novolteado img {
+    -webkit-filter: invert(0);
+}
+
 @media (min-width: 768px) {
     div.sidebar {
         width: 30%;
@@ -213,13 +219,7 @@ div.volteado img {
 }
 
 
-/* I push my fingers into my EEEEEEEEEYEESSSSSS */
-
-
 /* MAIN */
-
-
-/* I won't let this build up inside of me */
 
 div.imagenes {
     display: block;
@@ -229,7 +229,7 @@ div.imagenes img {
     display: block;
     padding: 1rem;
     width: 100%;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -274,12 +274,15 @@ div.imagenes img.grid-row46 {
     height: 50%;
 }
 
-div.imagenes img.grid-column13 { /* Este hace que ocupe solo los 4 espacios*/
+div.imagenes img.grid-column13 {
+    /* Este hace que ocupe solo los 4 espacios*/
     grid-column: 1 / 3;
     height: 100%;
 }
-img.gridcolumn13{ /* Este hace que ocupe solo dos columnas en una fila */
-    grid-column:1/3;
+
+img.gridcolumn13 {
+    /* Este hace que ocupe solo dos columnas en una fila */
+    grid-column: 1/3;
 }
 
 div.imagenes img.grid-column24 {
@@ -288,7 +291,7 @@ div.imagenes img.grid-column24 {
 
 div.imagenes img.grid-column35 {
     grid-column: 3 / 5;
-    height:100%;
+    height: 100%;
 }
 
 
@@ -303,25 +306,38 @@ div.video {
 div.video iframe {
     width: 90%;
 }
+
+
 /* LIGHTBOX */
-#lightbox{
-    position:fixed; /* Creo que esto es para indicar que es un elemento con un flow diferente a todo el documento B) */
-    z-index:1000; /* Se respetará sí o sí esta capa por encima de todo el contenido */
-    top:0;
-    width:100%;
-    height:100%;
-    background-color:rgba(0,0,0,.8); /* Se crea un filtro negro para toda la página, que servirá de fondo cuando la imagen esté superpuesta */
-    display:none; /* En caso de que no se diera un display:none se mostraría en toda la página el filtro negro*/
+
+#lightbox {
+    position: fixed;
+    /* Creo que esto es para indicar que es un elemento con un flow diferente a todo el documento B) */
+    z-index: 1000;
+    /* Se respetará sí o sí esta capa por encima de todo el contenido */
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    /* Se crea un filtro negro para toda la página, que servirá de fondo cuando la imagen esté superpuesta */
+    display: none;
+    /* En caso de que no se diera un display:none se mostraría en toda la página el filtro negro*/
 }
-#lightbox.active{
-    display:flex; /* Mostrar el lightbox, osea activar el filtro negro */
-    justify-content: center; /* Esto centrará todo lo que se ponga dentro */
-    align-items: center; /* Esto centrará todo lo que se ponga dentro */
+
+#lightbox.active {
+    display: flex;
+    /* Mostrar el lightbox, osea activar el filtro negro */
+    justify-content: center;
+    /* Esto centrará todo lo que se ponga dentro */
+    align-items: center;
+    /* Esto centrará todo lo que se ponga dentro */
 }
-#lightbox img{
-    max-width:80%; /* Dimensiones para las imágenes obviamente */
+
+#lightbox img {
+    max-width: 80%;
+    /* Dimensiones para las imágenes obviamente */
     max-height: 90%;
-    padding:4px;
-    background-color:black;
-    border:2px solid white;
+    padding: 4px;
+    background-color: black;
+    border: 2px solid white;
 }
