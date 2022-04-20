@@ -100,13 +100,18 @@
         });
 
         lightbox.addEventListener('click', e => { // Evento de click fuera del contenedor de lightbox
-            if (e.target !== e.currentTarget) return; // e.target será básicamente el fondo negro, y e.currentTarget es el contenedor de la imagen
+            if (e.target !== e.currentTarget) return; // e.target será básicamente el fondo negro, y e.currentTarget es el contenedor de la imagen                    
             lightbox.classList.remove('active'); // Se quita la clase de active, dando un display:none por default gracias a nuestro CSS
         });
+        lightbox.addEventListener('keypress',            function keyPress (e) {
+            if(e.key === "Escape" || e.key === "Esc") {
+                lightbox.classList.remove('active'); // Se quita la clase de active, dando un display:none por default gracias a nuestro CSS
+            }
+        })
         /* CIERRE LIGHTBOX */
 
         /* Perros tags */
-        /* Esto está bien hardcodeado, lo sé, no lo abras xD */
+        /* Esto está bien hardcodeado, lo sé, no lo abras */
         if (redireccionar) {
             const pagindex = document.querySelector('#index');
             const pagcomercial = document.querySelector('#pagComercial');
@@ -187,11 +192,13 @@
         }
 
         const imagenPerfil = document.querySelector('img.imagen-perfil');
-        let yLisay = 0;
-        imagenPerfil.addEventListener('click', e => {
-            yLisay += 1;
-            (yLisay >= 50) ? alert("Pícate la cola pendejo."): '';
-        });
+        if(imagenPerfil){
+           let yLisay = 0;
+            imagenPerfil.addEventListener('click', e => {
+                yLisay += 1;
+                (yLisay >= 50) ? alert("Pícate la cola pendejo."): '';
+            });
+        }
 
     }); // DOM CONTENT LOADED
 })();

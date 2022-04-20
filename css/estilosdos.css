@@ -551,6 +551,13 @@ div.proyectos {
     align-self: center;
 }
 
+div.proyectos img{
+    position: absolute;
+    bottom: -5rem;
+    width: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 /* CAPA 2 */
 
@@ -562,6 +569,7 @@ div.skeleton {
     transform: translateX(-50%);
     width: 80%;
     height: 70%;
+    clip-path: polygon(50% 0%, 100% 0px, 100% 100%, 77.50% 103.76%, 65% 74%, 38% 74%, 21.84% 103.01%, 0px 100%, 0px 0px);
 }
 
 div.skeleton img {
@@ -577,7 +585,6 @@ div.skeleton img {
 
 .foreground {
     position: absolute;
-    ;
     top: 2rem;
     left: 50%;
     transform: translateX(-50%);
@@ -642,10 +649,11 @@ div.skeleton img {
     font-size: 1.7rem;
     font-weight: 300;
     font-family: 'Zrnic';
+    color:rgba(204,190,162,255);
 }
 
 .text:hover {
-    background-color: rgb(208, 82, 54);
+    background-color: rgba(87,100,82,255);
 }
 
 .text:hover a {
