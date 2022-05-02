@@ -52,19 +52,28 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(208, 82, 54);
+    background-color: var(--red);
     border-radius: 15px;
 }
 
 :root {
-    scrollbar-color: #d05236 #1D191F !important;
+    scrollbar-color: var(--red) #1D191F !important;
     scrollbar-width: thin !important;
+    --green:rgba(87,100,82,255);
+    --gold:rgba(204,190,162,255);
+    --red:rgb(208, 82, 54);
+    --swis:'Swis';
+    --ricochet:'Ricochet';
+    --lapulga:'LaPulga';
+    --zrnic:'Zrnic';
+    --twocents:'Tw Cen MT';
+    --arial:'Arial', 'sans-serif';
 }
 
 
 /* SNAP */
 
-.seccion1,
+.section1,
 .seccion2,
 .seccion3 {
     scroll-snap-align: center;
@@ -83,7 +92,7 @@ img {
 }
 
 h2 {
-    font-family: 'Zrnic';
+    font-family: var(--zrnic);
 }
 
 h2,
@@ -97,24 +106,24 @@ h3 {
 }
 
 h3 {
-    font-family: 'Swis';
+    font-family: var(--swis);
 }
 
 p {
     color: white;
     font-size: 2rem;
-    font-family: 'Ricochet';
+    font-family: var(--ricochet);
 }
 
 
 /* Heads will roll on the floor */
 
 
-/* SECCIONES 
+/* SECTIONS
     > section
     > marco
     > sidebar
-    > contenido
+    > content
 */
 
 section {
@@ -152,7 +161,7 @@ div.tags .lang p {
     margin-left: 13%;
     font-size: 1.2rem;
     color: #383030;
-    font-family: 'Zrnic';
+    font-family: var(--zrnic);
 }
 
 div.lang:hover {
@@ -172,12 +181,12 @@ div.lang:hover {
     }
 }
 
-section.seccion1 {
+section.section1 {
     position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
 }
 
-section img.hijo {
+section img.child {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -235,7 +244,7 @@ div.nombre {
 }
 
 div.nombre h2 {
-    font-family: 'Swis';
+    font-family: var(--swis);
     font-weight: 300;
     font-size: 2.5rem;
     margin: 0;
@@ -306,7 +315,7 @@ div.arrows {
 }
 
 
-/* Volteado de la sección 3 */
+/* Section 3 flip */
 
 .arrows.volteado {
     transform: rotateX(180deg);
@@ -329,11 +338,11 @@ section.seccion3 .marco {
 }
 
 
-/* Animación de las flechas */
+/* Arrows animation */
 
 div.arrows i {
     font-size: 3rem;
-    animation: zoomflecha 1s infinite;
+    animation: arrowZoom 1s infinite;
 }
 
 @media only screen and (min-width:1600px) {
@@ -342,7 +351,7 @@ div.arrows i {
     }
 }
 
-@keyframes zoomflecha {
+@keyframes arrowZoom {
     30% {
         padding-bottom: 0.3rem;
     }
@@ -384,21 +393,21 @@ section div.lettering .letritas h3 {
 }
 
 
-/* GLITCHING LETTERS */
+/* GLITCHING letras */
 
 
-/* Pues si está hardcodeado, y qué, cumple el objetivo */
+/* Hardcoded, so what, it gets the job done */
 
-section.seccion1 .letritas h3:nth-child(1),
-section.seccion1 .letritas h3:nth-child(3),
-section.seccion1 .letras h2:nth-child(1),
-section.seccion1 .letras h2:nth-child(3) {
+section.section1 .letritas h3:nth-child(1),
+section.section1 .letritas h3:nth-child(3),
+section.section1 .letras h2:nth-child(1),
+section.section1 .letras h2:nth-child(3) {
     animation: 7s glitchleft infinite;
 }
 
-section.seccion1 .letritas h3:nth-child(2),
-section.seccion1 .letritas h3:nth-child(4),
-section.seccion1 .letras h2:nth-child(2) {
+section.section1 .letritas h3:nth-child(2),
+section.section1 .letritas h3:nth-child(4),
+section.section1 .letras h2:nth-child(2) {
     animation: 7s glitchright infinite;
 }
 
@@ -507,7 +516,7 @@ section.seccion1 .letras h2:nth-child(2) {
 }
 
 
-/* CONTENIDO */
+/* CONTENT */
 
 div.contenido {
     width: 100%;
@@ -540,7 +549,7 @@ div.flex-proyectos:nth-child(2) {
 }
 
 
-/* CAPA 1 */
+/* 1st LAYER */
 
 div.proyectos {
     position: relative;
@@ -559,7 +568,7 @@ div.proyectos img{
     transform: translateX(-50%);
 }
 
-/* CAPA 2 */
+/* 2nd LAYER */
 
 div.skeleton {
     border: 1px solid white;
@@ -581,7 +590,7 @@ div.skeleton img {
 }
 
 
-/* CAPA 3 */
+/* 3rd LAYER */
 
 .foreground {
     position: absolute;
@@ -615,7 +624,7 @@ div.skeleton img {
 }
 
 
-/* CAPA 4 */
+/* 4th LAYER */
 
 .text {
     position: absolute;
@@ -623,7 +632,7 @@ div.skeleton img {
     right: 0;
     left: 0;
     bottom: 0;
-    font-family: 'Zrnic';
+    font-family: var(--zrnic);
     text-align: center;
 }
 
@@ -648,12 +657,12 @@ div.skeleton img {
 .text a p {
     font-size: 1.7rem;
     font-weight: 300;
-    font-family: 'Zrnic';
-    color:rgba(204,190,162,255);
+    font-family: var(--zrnic);
+    color:var(--gold);
 }
 
 .text:hover {
-    background-color: rgba(87,100,82,255);
+    background-color: var(--green);
 }
 
 .text:hover a {
@@ -665,13 +674,13 @@ a.hide {
 }
 
 @media only screen and (min-width:1600px) {
-    /* CAPA 1 */
+    /* 1st LAYER */
     div.proyectos {
         width: 20rem;
         height: 25rem;
         margin: 0 auto;
     }
-    /* CAPA 2 */
+    /* 2nd LAYER */
     div.skeleton {
         left: 50%;
         bottom: -4rem;
@@ -689,7 +698,7 @@ a.hide {
         transform: translateX(-50%);
         padding: 50% 70%;
     }
-    /* CAPA 4 */
+    /* 4th LAYER */
     .text a {
         font-size: 2.4rem;
     }
@@ -699,7 +708,7 @@ a.hide {
 }
 
 
-/* SECCION 3 - ABOUT ME */
+/* SECTION 3 - ABOUT ME */
 
 .cards {
     display: flex;
@@ -768,7 +777,7 @@ a.hide {
 }
 
 .info h3 {
-    font-family: 'Tw Cen MT';
+    font-family: var(--twocents);
     font-size: 3.6rem;
     text-transform: none;
     text-align: center;
@@ -784,7 +793,7 @@ a.hide {
 }
 
 .info p {
-    font-family: 'Arial', 'sans-serif';
+    font-family: var(--arial);
     font-weight: 700;
     font-size: 1rem;
     line-height: 1.5;
@@ -920,10 +929,10 @@ div.abajo .arrows {
 
 div.abajo .arrows i {
     font-size: 3rem;
-    animation: flechaizquierda 1s infinite;
+    animation: leftArrow 1s infinite;
 }
 
-@keyframes flechaizquierda {
+@keyframes leftArrow {
     60% {
         margin-left: 0.3rem;
     }
@@ -962,7 +971,7 @@ div.abajo .arrows i {
 }
 
 
-/* Layout */
+/* LAYOUT */
 
 div.layout {
     padding: 0 2rem;
@@ -1007,7 +1016,6 @@ div.padre img.work {
 }
 
 div.padre img.imagenhija {
-    display: none;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -1015,7 +1023,7 @@ div.padre img.imagenhija {
 
 @media only screen and (min-width:1366px) {
     div.padre .foregroundZoom {
-        background-color: rgb(208, 82, 54);
+        background-color: var(--green);
         position: absolute;
         top: 0;
         left: 0;
@@ -1115,30 +1123,29 @@ div.imagenes .grid-row35 {
 
 #lightbox {
     position: fixed;
-    /* Creo que esto es para indicar que es un elemento con un flow diferente a todo el documento B) */
+    /* Gives the whole document a different flow B) */
     z-index: 1000;
-    /* Se respetará sí o sí esta capa por encima de todo el contenido */
+    /* It'll be above the other content the whole time */
     top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, .8);
-    /* Se crea un filtro negro para toda la página, que servirá de fondo cuando la imagen esté superpuesta */
+    /* Makes a black filter for the whole page, which acts as a background when the image overlaps */
     display: none;
-    /* En caso de que no se diera un display:none se mostraría en toda la página el filtro negro*/
+    /* Give a display none, otherwise the whole page would have the filter applied */
 }
 
 #lightbox.active {
     display: flex;
-    /* Mostrar el lightbox, osea activar el filtro negro */
+    /* Display lightbox, meaning activate black filter */
     justify-content: center;
-    /* Esto centrará todo lo que se ponga dentro */
     align-items: center;
-    /* Esto centrará todo lo que se ponga dentro */
+    /* THis will center everything inside */
 }
 
 #lightbox img {
     max-width: 80%;
-    /* Dimensiones para las imágenes obviamente */
+    /* Image dimensions */
     max-height: 90%;
     padding: 4px;
     background-color: black;

@@ -2,21 +2,21 @@
     "use strict";
     document.addEventListener('DOMContentLoaded', function() {
         console.clear();
-        console.log("Sitio hecho para Ricardo Flores.");
-        console.log("Desarrollado por GerFl.");
+        console.log("Website made for Architect Ricardo Flores.");
+        console.log("Developed by GerFl");
 
-        // Capturar el tamaño de pantalla al momento de entrar a la pagina
-        const redireccionar = document.querySelector('#new');
-        if (redireccionar) {
-            const tamanopantalla = window.innerWidth;
-            if (tamanopantalla < 768) {
+        // Capture screen size when page is being accessed
+        const redirect = document.querySelector('#new');
+        if (redirect) {
+            const screenSize = window.innerWidth;
+            if (screenSize < 768) {
                 window.location.href = 'olddesign/oldie.html';
             }
         }
 
-        const menumovil = document.querySelector('.menu-movil');
-        if (menumovil) {
-            // Menu movil
+        const mobileMenu = document.querySelector('.menu-movil');
+        if (mobileMenu) {
+            // Mobile menu
             document.querySelector('.logo a.barras').addEventListener('click', e => {
                 e.preventDefault();
                 document.querySelector('.iconos').style.display = "flex";
@@ -32,7 +32,7 @@
         }
 
         /* GLITCHMOB */
-        const fondoIndex = document.querySelector('section#seccion1 img.hijo');
+        const indexBackground = document.querySelector('section#seccion1 img.child');
 
         const glitchGallery = [
             "disenografico/diseno3.webp",
@@ -46,49 +46,60 @@
             "proyectoresidencial/residencial7.webp",
             "proyectoresidencial/residencial9.webp",
         ];
-        if (fondoIndex) {
+        if (indexBackground) {
             setInterval(() => {
-                var rand = Math.floor(Math.random() * 10);
+                var ironFist = Math.floor(Math.random() * 10);
                 fondoIndex.style.animation = "9s glitchMob infinite";
-                fondoIndex.src = `../arrebajaoenlabanera/${glitchGallery[rand]}`;
+                fondoIndex.src = `../arrebajaoenlabanera/${glitchGallery[ironFist]}`;
             }, 9000);
         }
+
+        const image=document.querySelectorAll('.padre img');
+        image.forEach(image=>{
+            image.addEventListener('mouseover',e=>{
+                const zoomImage=`
+                    <div class="foregroundZoom">
+                        <img src="arrebajaoenlabanera/textos/zoom.webp" alt="Zoom" class="imagenhija">
+                    </div>
+                `;
+                image.parentElement.insertAdjacentHTML('beforeend',zoomImage);
+            });
+        })
+
         /* LIGHTBOX */
-        /* Una manera sencilla con CSS y JavaScript puros */
-        /* Se hace una constante que va a ser el div a crear para posicionar la imagen */
+        /* An easy way with pure CSS and JS */
+        /* Declare a constant, which is going to be the div where we'll put the image*/
         const lightbox = document.createElement('div');
-        lightbox.id = 'lightbox'; // Se le da un ID
-        document.body.appendChild(lightbox); // Se añade el div que acabamos de crear, pero con CSS hacemos que no se muestre desde un inicio
-        const foreground = document.querySelectorAll('.foregroundZoom'); // Esto es para contar la cantidad elementos foregorundZoom en el documento
-        foreground.forEach(fore => { // Ciclamos cada foregroudnZoom gracias a la cantidad que acabamos de sacar, teniendo fore como referencia
-            fore.addEventListener('click', e => { // Evento de click en cada foregroundZoom
-                lightbox.classList.add('active'); // Se habilita el lighbox cuando se da click al elemento
-                const img = document.createElement('img'); // Creamos un elemento img para nuestro contenedor lightbox
-                img.src = fore.previousElementSibling.src; // Accedemos al atributo source del elemento hermano sobre el que queremos extraer el valor y dárselo
-                // al atributo source de la imagen que queremos poner en el lightbox
+        lightbox.id = 'lightbox'; // Give an ID
+        document.body.appendChild(lightbox); // Append the div we just created, but we don't display it yet
+        const foreground = document.querySelectorAll('.foregroundZoom'); // Count the elements with .foregroundZoom
+        foreground.forEach(forerunner => { // Cicle images
+            forerunner.addEventListener('click', e => {
+                lightbox.classList.add('active'); // Enable lightbox
+                const img = document.createElement('img'); // Create <img>
+                img.src = forerunner.previousElementSibling.src; // Extract the image source from the sibling
+                // to use it in our lighbox container
                 // imageneshija[1].parentElement.previousElementSibling.src
-                // 
-                if (fore.previousElementSibling.classList.contains('vertical')) { // Este bloque detecta si la imagen tiene clase vertical
+                if (forerunner.previousElementSibling.classList.contains('vertical')) { // Change dimensions if its a vertical image
                     img.style.width = "30%";
                     img.style.height = "100%";
                 }
-                while (lightbox.firstChild) { // Mientras el lightbox tenga un hijo
-                    lightbox.removeChild(lightbox.firstChild); // Se removerá ese hijo
-                    // En caso de que no se removiera el hijo, cada vez que cerremos el lightbox pero volvamos a abrir otra imagen,
-                    // se verán las dos, lo cual no queremos.
+                while (lightbox.firstChild) { // While it has a child
+                    lightbox.removeChild(lightbox.firstChild); // KIll child
+                    // If you don't kill the child, it will be visible overlapping everything
                 }
-                lightbox.appendChild(img); // Añadimos ese elemento como hijo al lightbox
+                lightbox.appendChild(img); // Add as child to lightbox
             })
         });
 
-        /* HABILITAR LIGHTBOX PARA EL DISEÑO VIEJO */
-        const imagenDisenoViejo = document.querySelectorAll('.vieja');
-        imagenDisenoViejo.forEach(imagen => {
-            imagen.addEventListener('click', e => {
+        /* ENABLE LIGHTBOX FOR THE OLD DESIGN */
+        const oldDesignImage = document.querySelectorAll('.vieja');
+        oldDesignImage.forEach(image => {
+            image.addEventListener('click', e => {
                 lightbox.classList.add('active');
                 const img = document.createElement('img');
-                img.src = imagen.src;
-                if (imagen.classList.contains('vertical')) {
+                img.src = image.src;
+                if (image.classList.contains('vertical')) {
                     img.style.width = "30%";
                     img.style.height = "100%";
                 }
@@ -99,20 +110,20 @@
             })
         });
 
-        lightbox.addEventListener('click', e => { // Evento de click fuera del contenedor de lightbox
-            if (e.target !== e.currentTarget) return; // e.target será básicamente el fondo negro, y e.currentTarget es el contenedor de la imagen                    
-            lightbox.classList.remove('active'); // Se quita la clase de active, dando un display:none por default gracias a nuestro CSS
+        lightbox.addEventListener('click', e => { // CLick event for the outside of the container
+            if (e.target !== e.currentTarget) return; // e.target it's the black background, and e.currentTarget it's the image container
+            lightbox.classList.remove('active'); // Remove class 'active', resulting in a display:none
         });
         lightbox.addEventListener('keypress',            function keyPress (e) {
             if(e.key === "Escape" || e.key === "Esc") {
-                lightbox.classList.remove('active'); // Se quita la clase de active, dando un display:none por default gracias a nuestro CSS
+                lightbox.classList.remove('active'); // How to make this work
             }
         })
-        /* CIERRE LIGHTBOX */
+        /* END LIGHTBOX */
 
-        /* Perros tags */
-        /* Esto está bien hardcodeado, lo sé, no lo abras */
-        if (redireccionar) {
+        /* Damn tags */
+        /* So hardcoded, so wrong, do not open */
+        if (redirect) {
             const pagindex = document.querySelector('#index');
             const pagcomercial = document.querySelector('#pagComercial');
             const pagresidencial = document.querySelector('#pagResidencial');
@@ -191,10 +202,10 @@
             });
         }
 
-        const imagenPerfil = document.querySelector('img.imagen-perfil');
-        if(imagenPerfil){
+        const profilePicture = document.querySelector('img.imagen-perfil');
+        if(profilePicture){
            let yLisay = 0;
-            imagenPerfil.addEventListener('click', e => {
+            profilePicture.addEventListener('click', e => {
                 yLisay += 1;
                 (yLisay >= 50) ? alert("Pícate la cola pendejo."): '';
             });

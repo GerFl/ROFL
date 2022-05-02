@@ -7,20 +7,20 @@
         var e, n, t, o, r, i, a;
         for (var s in b)
             if (b.hasOwnProperty(s)) {
-                if (e = [], n = b[s], n.name && (e.push(n.name.toLowerCase()), n.options && n.options.aliases && n.options.aliases.length))
+                if (e = [], n = b[s], n.nombre && (e.push(n.nombre.toLowerCase()), n.options && n.options.aliases && n.options.aliases.length))
                     for (t = 0; t < n.options.aliases.length; t++) e.push(n.options.aliases[t].toLowerCase());
                 for (o = A(n.fn, "function") ? n.fn() : n.fn, r = 0; r < e.length; r++) i = e[r], a = i.split("."), 1 === a.length ? Modernizr[a[0]] = o : (!Modernizr[a[0]] || Modernizr[a[0]] instanceof Boolean || (Modernizr[a[0]] = new Boolean(Modernizr[a[0]])), Modernizr[a[0]][a[1]] = o), y.push((o ? "" : "no-") + a.join("-"))
             }
     }
 
     function r(e) {
-        var n = C.className,
+        var n = C.classnombre,
             t = Modernizr._config.classPrefix || "";
         if (_ && (n = n.baseVal), Modernizr._config.enableJSClass) {
             var A = new RegExp("(^|\\s)" + t + "no-js(\\s|$)");
             n = n.replace(A, "$1" + t + "js$2")
         }
-        Modernizr._config.enableClasses && (n += " " + t + e.join(" " + t), _ ? C.className.baseVal = n : C.className = n)
+        Modernizr._config.enableClasses && (n += " " + t + e.join(" " + t), _ ? C.classnombre.baseVal = n : C.classnombre = n)
     }
 
     function i(e, n) {
@@ -115,13 +115,13 @@
                 var t = this;
                 setTimeout(function() { n(t[e]) }, 0)
             },
-            addTest: function(e, n, t) { b.push({ name: e, fn: n, options: t }) },
-            addAsyncTest: function(e) { b.push({ name: null, fn: e }) }
+            addTest: function(e, n, t) { b.push({ nombre: e, fn: n, options: t }) },
+            addAsyncTest: function(e) { b.push({ nombre: null, fn: e }) }
         },
         Modernizr = function() {};
     Modernizr.prototype = B, Modernizr = new Modernizr;
     var Q, C = n.documentElement,
-        _ = "svg" === C.nodeName.toLowerCase();
+        _ = "svg" === C.nodenombre.toLowerCase();
     ! function() {
         var e = {}.hasOwnProperty;
         Q = A(e, "undefined") || A(e.call, "undefined") ? function(e, n) { return n in e && A(e.constructor.prototype[n], "undefined") } : function(n, t) { return e.call(n, t) }
@@ -149,11 +149,11 @@
             var o = new Image;
             o.onerror = A, o.onload = A, o.src = n
         }
-        var n = [{ uri: "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=", name: "webp" }, { uri: "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==", name: "webp.alpha" }, { uri: "data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA", name: "webp.animation" }, { uri: "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=", name: "webp.lossless" }],
+        var n = [{ uri: "data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=", nombre: "webp" }, { uri: "data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==", nombre: "webp.alpha" }, { uri: "data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA", nombre: "webp.animation" }, { uri: "data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=", nombre: "webp.lossless" }],
             t = n.shift();
-        e(t.name, t.uri, function(t) {
+        e(t.nombre, t.uri, function(t) {
             if (t && "load" === t.type)
-                for (var A = 0; A < n.length; A++) e(n[A].name, n[A].uri)
+                for (var A = 0; A < n.length; A++) e(n[A].nombre, n[A].uri)
         })
     });
     var S = "Moz O ms Webkit",
