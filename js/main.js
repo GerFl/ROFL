@@ -50,7 +50,7 @@
             setInterval(() => {
                 var ironFist = Math.floor(Math.random() * 10);
                 fondoIndex.style.animation = "9s glitchMob infinite";
-                fondoIndex.src = `../arrebajaoenlabanera/${glitchGallery[ironFist]}`;
+                fondoIndex.src = `../assets/${glitchGallery[ironFist]}`;
             }, 9000);
         }
 
@@ -59,7 +59,7 @@
             image.addEventListener('mouseover',e=>{
                 const zoomImage=`
                     <div class="foregroundZoom">
-                        <img src="arrebajaoenlabanera/textos/zoom.webp" alt="Zoom" class="imagenhija">
+                        <img src="assets/zoom.webp" alt="Zoom" class="imagenhija">
                     </div>
                 `;
                 image.parentElement.insertAdjacentHTML('beforeend',zoomImage);
