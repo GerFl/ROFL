@@ -36,15 +36,15 @@
 
         const glitchGallery = [
             "disenografico/diseno3.webp",
-            "proyectocomercial/B-min2.webp",
-            "proyectocomercial/comercial4.webp",
-            "proyectocomercial/comercial6.webp",
-            "proyectocomercial/comercial7.webp",
-            "proyectocomercial/comercial12.webp",
-            "proyectoresidencial/residencial21.jpeg",
-            "proyectoresidencial/residencial22.jpeg",
-            "proyectoresidencial/residencial7.webp",
-            "proyectoresidencial/residencial9.webp",
+            "comercial/comercial21.webp",
+            "comercial/comercial4.webp",
+            "comercial/comercial6.webp",
+            "comercial/comercial7.webp",
+            "comercial/comercial12.webp",
+            "residencial/residencial21.jpeg",
+            "residencial/residencial22.jpeg",
+            "residencial/residencial7.webp",
+            "residencial/residencial9.webp",
         ];
         if (indexBackground) {
             setInterval(() => {
@@ -54,38 +54,35 @@
             }, 9000);
         }
 
-        const image=document.querySelectorAll('.padre img');
-        image.forEach(image=>{
+        /* LIGHTBOX */
+        const images=document.querySelectorAll('.padre'); // Count all images in the gallery
+        images.forEach(image=>{
             image.addEventListener('mouseover',e=>{
                 const zoomImage=`
                     <div class="foregroundZoom">
                         <img src="assets/zoom.webp" alt="Zoom" class="imagenhija">
                     </div>
                 `;
-                image.parentElement.insertAdjacentHTML('beforeend',zoomImage);
+                image.insertAdjacentHTML('beforeend',zoomImage);
             });
         })
-
-        /* LIGHTBOX */
         /* An easy way with pure CSS and JS */
         /* Declare a constant, which is going to be the div where we'll put the image*/
         const lightbox = document.createElement('div');
         lightbox.id = 'lightbox'; // Give an ID
         document.body.appendChild(lightbox); // Append the div we just created, but we don't display it yet
-        const foreground = document.querySelectorAll('.foregroundZoom'); // Count the elements with .foregroundZoom
-        foreground.forEach(forerunner => { // Cicle images
-            forerunner.addEventListener('click', e => {
+        images.forEach(image => { // Cicle images
+            image.addEventListener('click', e => {
                 lightbox.classList.add('active'); // Enable lightbox
                 const img = document.createElement('img'); // Create <img>
-                img.src = forerunner.previousElementSibling.src; // Extract the image source from the sibling
+                img.src = image.childNodes[1].src; // Extract the image source from the sibling
                 // to use it in our lighbox container
-                // imageneshija[1].parentElement.previousElementSibling.src
-                if (forerunner.previousElementSibling.classList.contains('vertical')) { // Change dimensions if its a vertical image
+                if (image.childNodes[1].classList.contains('vertical')) { // Change dimensions if its a vertical image
                     img.style.width = "30%";
                     img.style.height = "100%";
                 }
                 while (lightbox.firstChild) { // While it has a child
-                    lightbox.removeChild(lightbox.firstChild); // KIll child
+                    lightbox.removeChild(lightbox.firstChild); // Kill child
                     // If you don't kill the child, it will be visible overlapping everything
                 }
                 lightbox.appendChild(img); // Add as child to lightbox
@@ -114,9 +111,10 @@
             if (e.target !== e.currentTarget) return; // e.target it's the black background, and e.currentTarget it's the image container
             lightbox.classList.remove('active'); // Remove class 'active', resulting in a display:none
         });
-        lightbox.addEventListener('keypress',            function keyPress (e) {
-            if(e.key === "Escape" || e.key === "Esc") {
-                lightbox.classList.remove('active'); // How to make this work
+        document.querySelector('body').addEventListener('keypress', e=>{
+            if(e.key === " ") {
+                e.preventDefault();
+                lightbox.classList.remove('active');
             }
         })
         /* END LIGHTBOX */
@@ -178,7 +176,7 @@
                 if (pagindex) {
                     proyectoComercial.innerText = "Aesthetical strategies and functionality development";
                     proyectoResidencial.innerText = "Comfort projects for the user experience";
-                    renders.innerText = "Professinal design coworking";
+                    renders.innerText = "Professional design coworking";
                     disenoGrafico.innerText = "Identity conceptualization and development";
                     recorridosVirtuales.innerText = "Cinematogtaphic representation of ideas";
                     tedMosby.innerText = "Architect";

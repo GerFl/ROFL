@@ -521,6 +521,7 @@ section.section1 .letras h2:nth-child(2) {
 div.contenido {
     width: 100%;
     display: flex;
+    max-height:100vh;
 }
 
 div.contenido img {
@@ -1021,7 +1022,11 @@ div.padre img.imagenhija {
     transform: translateY(-50%);
 }
 
-@media only screen and (min-width:1366px) {
+div.foregroundZoom{
+    display:none;
+}
+
+@media only screen and (min-width:1080px) {
     div.padre .foregroundZoom {
         background-color: var(--green);
         position: absolute;
@@ -1029,7 +1034,6 @@ div.padre img.imagenhija {
         left: 0;
         bottom: 0;
         right: 0;
-        display: none;
     }
     div.padre img.imagenhija {
         display: block;
@@ -1040,7 +1044,7 @@ div.padre img.imagenhija {
     }
     div.foregroundZoom img {
         height: 10rem;
-        width: 15rem;
+        width: 13rem;
     }
 }
 
